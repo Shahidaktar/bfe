@@ -7,6 +7,9 @@ import { isAdminSession } from '../../../lib/admin';
 import { AdminSidebar } from '../../../components/admin/AdminSidebar';
 import { AdminSignOutButton } from '../../../components/admin/AdminSignOutButton';
 
+export const instant = false;
+
+
 export const metadata = {
   title: 'Beyond Admin - Travel Quotes',
   robots: { index: false, follow: false },

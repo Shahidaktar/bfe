@@ -5,6 +5,9 @@ import { auth } from '../../../lib/auth';
 import { isAdminSession } from '../../../lib/admin';
 import { AdminLoginForm } from '../../../components/admin/AdminLoginForm';
 
+export const instant = false;
+
+
 
 export const metadata: Metadata = {
   title: 'Admin Sign In - Beyond Forever Earth',

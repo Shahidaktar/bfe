@@ -9,6 +9,9 @@ import { DeleteSubmissionButton } from '../../../../../../components/admin/asses
 import { SubmissionAnswers } from '../../../../../../components/admin/assessment/SubmissionAnswers';
 import type { SubmissionAnswer } from '../../../../../../lib/assessment';
 
+export const instant = false;
+
+
 export const metadata: Metadata = {
   title: 'Assessment Submission - Beyond Admin',
   robots: { index: false, follow: false },

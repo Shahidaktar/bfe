@@ -1,10 +1,13 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { connection } from 'next/server';
 import { ClipboardList, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 import { prisma } from '../../../../../lib/prisma';
 import { DeleteSubmissionButton } from '../../../../../components/admin/assessment/DeleteSubmissionButton';
+
+export const instant = false;
+
 
 export const metadata: Metadata = {
   title: 'Assessment Submissions - Beyond Admin',

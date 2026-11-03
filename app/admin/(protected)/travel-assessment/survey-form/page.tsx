@@ -1,8 +1,11 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { connection } from 'next/server';
 import { prisma } from '../../../../../lib/prisma';
 import { QuestionManager } from '../../../../../components/admin/assessment/QuestionManager';
 import type { WizardQuestion, QuestionType } from '../../../../../lib/assessment';
+
+export const instant = false;
+
 
 export const metadata: Metadata = {
   title: 'Survey Form - Beyond Admin',

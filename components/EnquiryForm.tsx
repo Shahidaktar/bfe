@@ -95,7 +95,8 @@ export const JourneyEnquiryForm: React.FC<JourneyEnquiryFormProps> = ({
 }) => {
   const [step, setStep] = useState<Step>(1);
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const stepEnteredAt = useRef(Date.now());
+  // Initialised on mount in useEffect; Date.now() must not evaluate during prerender.
+  const stepEnteredAt = useRef(0);
 
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');

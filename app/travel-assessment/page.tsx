@@ -1,8 +1,11 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import { connection } from 'next/server';
 import { prisma } from '../../lib/prisma';
 import { chunkSteps, type WizardQuestion, type QuestionType } from '../../lib/assessment';
 import { AssessmentWizard } from '../../components/assessment/AssessmentWizard';
+
+export const instant = false;
+
 
 export const metadata: Metadata = {
   title: 'Travel Assessment - Beyond Forever Earth',

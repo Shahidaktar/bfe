@@ -7,6 +7,9 @@ import { ChevronLeft, Mail, Phone } from 'lucide-react';
 import { prisma } from '../../../../../lib/prisma';
 import { DeleteQuoteButton } from '../../../../../components/admin/DeleteQuoteButton';
 
+export const instant = false;
+
+
 
 export const metadata: Metadata = {
   title: 'Travel Quote - Beyond Admin',
