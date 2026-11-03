@@ -30,6 +30,16 @@ h1, h2, h3, .font-editorial {
   outline-offset: 2px;
 }
 
+/* Form controls use underline borders instead of a box outline */
+input:focus,
+input:focus-visible,
+select:focus,
+select:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);

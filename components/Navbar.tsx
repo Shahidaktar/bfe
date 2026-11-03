@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useSession, signOut } from 'next-auth/react';
 import { getLenis, scrollTo, scrollToSection } from '../lib/lenis';
 import { useNavigate, useRoute } from '../lib/router';
 import { useSite } from './SiteProvider';
@@ -19,14 +20,19 @@ import {
   Linkedin,
   MessageCircle,
   ChevronRight,
+  LogOut,
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
-  const { goPlan: onOpenPlanner, openContact: onOpenContact, openSearch: onOpenSearch } = useSite();
+  const { goPlan: onOpenPlanner, openContact: onOpenContact, openSearch: onOpenSearch, openLogin: onOpenLogin } = useSite();
+  const { data: session, status } = useSession();
   const navigate = useNavigate();
   const route = useRoute();
   const [isScrolled, setIsScrolled] = useState(false);
   const [fullScreenMenuOpen, setFullScreenMenuOpen] = useState(false);
+  const [accountMenuOpen, setAccountMenuOpen] = useState(false);
+  const [avatarFailed, setAvatarFailed] = useState(false);
+  const accountMenuRef = useRef<HTMLDivElement>(null);
   // Cascading menu state: level-2 panel (About Us / Destinations) and level-3 region.
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [activeRegion, setActiveRegion] = useState<string | null>(null);
@@ -97,11 +103,33 @@ export const Navbar: React.FC = () => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setFullScreenMenuOpen(false);
+        setAccountMenuOpen(false);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
+
+  // Close the account dropdown when clicking outside of it
+  useEffect(() => {
+    if (!accountMenuOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (accountMenuRef.current && !accountMenuRef.current.contains(e.target as Node)) {
+        setAccountMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [accountMenuOpen]);
+
+  // Reset the broken-image fallback whenever the user/session changes (e.g. after sign out/in)
+  useEffect(() => {
+    setAvatarFailed(false);
+  }, [session?.user?.image, status]);
+
+  const isAuthenticated = status === 'authenticated';
+  const accountName = session?.user?.name ?? session?.user?.email ?? 'Member';
+  const accountInitial = accountName.trim().charAt(0).toUpperCase() || 'M';
 
   const handleNavClick = (href: string) => {
     setFullScreenMenuOpen(false);
@@ -135,7 +163,7 @@ export const Navbar: React.FC = () => {
         { name: 'Africa', places: ['Kenya', 'Tanzania', 'South Africa', 'Botswana', 'Morocco', 'Rwanda'] },
         { name: 'Asia', places: ['Japan', 'Maldives', 'Bali', 'Thailand', 'Singapore', 'Vietnam'] },
         { name: 'Europe', places: ['Italy', 'Switzerland', 'France', 'Greece', 'Spain', 'Portugal'] },
-        { name: 'India', places: ['Rajasthan', 'Kerala', 'Ladakh', 'Goa', 'Himalayas', 'Andaman Islands'] },
+        { name: 'India', places: ['Rajasthan', 'Kerala', 'Ladakh', 'Goa', 'Himalayas'] },
       ],
     },
     { label: 'Create Bucket List', href: 'plan' },
@@ -243,9 +271,65 @@ export const Navbar: React.FC = () => {
                 <ArrowRight className="w-3.5 h-3.5 hidden sm:block" />
               </button>
 
+              {/* Account / Sign in */}
+              <div className="relative" ref={accountMenuRef}>
+                {isAuthenticated ? (
+                  <button
+                    onClick={() => setAccountMenuOpen((prev) => !prev)}
+                    aria-label="Open account menu"
+                    aria-expanded={accountMenuOpen}
+                    className="w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden border border-white/30 hover:border-[#c59b67] bg-white/10 text-white flex items-center justify-center transition-all cursor-pointer active:scale-95 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#c59b67]"
+                  >
+                    {session?.user?.image && !avatarFailed ? (
+                      <img
+                        src={session.user.image}
+                        alt={accountName}
+                        referrerPolicy="no-referrer"
+                        onError={() => setAvatarFailed(true)}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span className="text-xs font-semibold text-[#c59b67]">{accountInitial}</span>
+                    )}
+                  </button>
+                ) : (
+                  <button
+                    onClick={onOpenLogin}
+                    aria-label="Sign in or create an account"
+                    className="h-8 sm:h-9 px-3 sm:px-4 rounded-full border border-white/30 hover:border-[#c59b67] hover:bg-white/10 text-white/90 hover:text-white text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase transition-all cursor-pointer active:scale-95 whitespace-nowrap focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[#c59b67]"
+                  >
+                    Sign In
+                  </button>
+                )}
+
+                {isAuthenticated && accountMenuOpen && (
+                  <div className="absolute right-0 top-full mt-2 w-60 rounded-xl bg-[#081726] border border-white/15 shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-1 duration-200">
+                    <div className="px-4 py-3 border-b border-white/10">
+                      <p className="text-sm text-white font-medium truncate">{accountName}</p>
+                      {session?.user?.email && (
+                        <p className="text-[11px] text-stone-400 truncate">{session.user.email}</p>
+                      )}
+                    </div>
+                    <button
+                      onClick={() => {
+                        setAccountMenuOpen(false);
+                        signOut({ redirectTo: '/' });
+                      }}
+                      className="w-full flex items-center gap-2.5 px-4 py-3 text-left text-xs font-medium tracking-wider uppercase text-stone-300 hover:text-[#c59b67] hover:bg-white/5 transition-colors cursor-pointer"
+                    >
+                      <LogOut className="w-4 h-4" />
+                      <span>Sign Out</span>
+                    </button>
+                  </div>
+                )}
+              </div>
+
               {/* Hamburger Button */}
               <button
-                onClick={() => setFullScreenMenuOpen(true)}
+                onClick={() => {
+                  setAccountMenuOpen(false);
+                  setFullScreenMenuOpen(true);
+                }}
                 aria-label="Open full screen navigation menu"
                 className="h-8 sm:h-9 px-2.5 sm:px-3.5 rounded-full border border-white/30 hover:border-[#c59b67] hover:bg-white/10 active:scale-95 flex items-center gap-2 text-white transition-all cursor-pointer group focus-visible:outline-none"
               >
@@ -594,6 +678,30 @@ export const Navbar: React.FC = () => {
                     </div>
                   </div>
 
+                  {/* Signed-in member strip */}
+                  {isAuthenticated && (
+                    <div className="flex items-center gap-3 pt-3 border-t border-white/10">
+                      <div className="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-white/10 flex items-center justify-center shrink-0">
+                        {session?.user?.image ? (
+                          <img
+                            src={session.user.image}
+                            alt={accountName}
+                            referrerPolicy="no-referrer"
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <span className="text-xs font-semibold text-[#c59b67]">{accountInitial}</span>
+                        )}
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-sm text-white truncate">{accountName}</p>
+                        {session?.user?.email && (
+                          <p className="text-[11px] text-stone-400 truncate">{session.user.email}</p>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
                   {/* Actions inside menu */}
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
                     <button
@@ -606,15 +714,28 @@ export const Navbar: React.FC = () => {
                       <span>Travel Quote</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
-                    <button
-                      onClick={() => {
-                        setFullScreenMenuOpen(false);
-                        onOpenContact();
-                      }}
-                      className="py-3 px-4 border border-white/25 hover:border-white hover:bg-white/10 text-white text-xs font-medium tracking-wider uppercase rounded-xl transition-all cursor-pointer"
-                    >
-                      Create Account
-                    </button>
+                    {isAuthenticated ? (
+                      <button
+                        onClick={() => {
+                          setFullScreenMenuOpen(false);
+                          signOut({ redirectTo: '/' });
+                        }}
+                        className="py-3 px-4 border border-white/25 hover:border-white hover:bg-white/10 text-white text-xs font-medium tracking-wider uppercase rounded-xl transition-all cursor-pointer flex items-center justify-center gap-2"
+                      >
+                        <LogOut className="w-3.5 h-3.5" />
+                        Sign Out
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => {
+                          setFullScreenMenuOpen(false);
+                          onOpenLogin();
+                        }}
+                        className="py-3 px-4 border border-white/25 hover:border-white hover:bg-white/10 text-white text-xs font-medium tracking-wider uppercase rounded-xl transition-all cursor-pointer"
+                      >
+                        Create Account
+                      </button>
+                    )}
                   </div>
                 </div>
 

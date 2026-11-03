@@ -1,30 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { MessageCircle, Phone, Mail } from 'lucide-react';
 import { JourneyEnquiryForm } from './EnquiryForm';
-import { CONTACT, whatsappLink } from '../lib/contact';
-
-const NEXT_STEPS = [
-  {
-    num: '01',
-    title: 'Your brief reaches a specialist',
-    description:
-      'Your enquiry goes to a dedicated travel designer who knows your destination — not a shared inbox.',
-  },
-  {
-    num: '02',
-    title: 'A personal reply',
-    description:
-      'We come back within one business day with first thoughts, questions and a sense of what is possible.',
-  },
-  {
-    num: '03',
-    title: 'A private draft itinerary',
-    description:
-      'Hotels, guides and private experiences, refined together until the journey feels unmistakably yours.',
-  },
-];
 
 const TRUST_POINTS = ['100% Personalised', '1:1 Travel Specialist', '24/7 Support'];
 
@@ -67,7 +44,7 @@ export const PlanPage: React.FC = () => {
           </div>
 
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-[1.08] max-w-3xl">
-            Plan My <span className="italic text-[#e8c697]">Journey</span>
+            Travel <span className="italic text-[#e8c697]">Quote</span>
           </h1>
 
           <p className="mt-5 max-w-xl text-sm sm:text-base font-sans text-stone-200 font-light leading-relaxed">
@@ -76,7 +53,7 @@ export const PlanPage: React.FC = () => {
             matter to you.
           </p>
 
-          <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] sm:text-xs tracking-wider uppercase text-stone-300 font-sans">
+          {/* <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] sm:text-xs tracking-wider uppercase text-stone-300 font-sans">
             {TRUST_POINTS.map((point, index) => (
               <React.Fragment key={point}>
                 {index > 0 && (
@@ -85,112 +62,31 @@ export const PlanPage: React.FC = () => {
                 <span>{point}</span>
               </React.Fragment>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
-      {/* Form + guidance */}
+      {/* Enquiry form */}
       <section id="enquiry" className="py-14 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-            {/* Enquiry form */}
-            <div className="lg:col-span-7">
-              <div className="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 sm:p-8">
-                <span className="text-[10px] tracking-[0.25em] text-[#c59b67] uppercase font-semibold block mb-1">
-                  Two Short Steps
-                </span>
-                <h2 className="font-serif text-2xl sm:text-3xl text-[#081726] tracking-tight mb-1.5">
-                  Tell Us About Your Journey
-                </h2>
-                <p className="text-xs sm:text-[13px] text-stone-500 font-light leading-relaxed mb-6">
-                  No obligation and no automated packages. The more you share, the more
-                  personal the first draft will be.
-                </p>
+        <div className="max-w-7xl mx-auto px-5 sm:px-8">
+          <div className="bg-white rounded-2xl border border-stone-200 shadow-sm p-6 sm:p-10 lg:p-12">
+            {/* <div className="text-center mb-8 sm:mb-10">
+              <span className="text-[10px] sm:text-[11px] tracking-[0.28em] text-[#c59b67] uppercase font-semibold block mb-3 font-sans">
+                Four Quick Steps
+              </span>
+              <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] text-[#081726] font-normal tracking-tight leading-[1.12] mb-3">
+                Tell Us About Your <span className="italic text-[#c59b67]">Journey</span>
+              </h2>
+              <p className="text-sm sm:text-base text-stone-500 font-light leading-relaxed max-w-2xl mx-auto">
+                No obligation and no automated packages. The more you share, the more
+                personal the first draft will be.
+              </p>
+            </div> */}
 
-                <JourneyEnquiryForm
-                  initialDestination={initialDestination}
-                  initialTravelType={initialTravelType}
-                />
-              </div>
-            </div>
-
-            {/* Supporting panel */}
-            <aside className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
-              <div className="bg-[#081726] rounded-2xl p-6 sm:p-8 text-white">
-                <span className="text-[10px] tracking-[0.25em] text-[#c59b67] uppercase font-semibold block mb-1">
-                  What Happens Next
-                </span>
-                <h2 className="font-serif text-xl sm:text-2xl font-normal mb-6">
-                  From enquiry to departure
-                </h2>
-
-                <ol className="space-y-5">
-                  {NEXT_STEPS.map((step) => (
-                    <li key={step.num} className="flex gap-4">
-                      <span className="font-mono text-xs text-[#c59b67] tracking-wider tabular-nums pt-0.5">
-                        {step.num}
-                      </span>
-                      <div>
-                        <h3 className="text-sm font-semibold text-white mb-1">
-                          {step.title}
-                        </h3>
-                        <p className="text-xs text-stone-400 font-light leading-relaxed">
-                          {step.description}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
-              </div>
-
-              <figure className="bg-[#f3ece1] rounded-2xl p-6 sm:p-7 border border-[#e4d7c3]">
-                <blockquote className="font-serif italic text-lg sm:text-xl text-[#081726] leading-snug">
-                  “We wanted a honeymoon that felt private rather than packaged. Our
-                  specialist steered us to an overwater villa we would never have found
-                  ourselves, and every transfer ran to the minute.”
-                </blockquote>
-                <figcaption className="mt-4 text-[11px] tracking-[0.2em] uppercase text-stone-600 font-sans">
-                  Rohit — Maldives honeymoon, 6 days
-                </figcaption>
-              </figure>
-
-              <div className="bg-white rounded-2xl border border-stone-200 p-6 sm:p-7">
-                <h3 className="font-serif text-lg sm:text-xl text-[#081726] mb-1">
-                  Prefer to talk it through?
-                </h3>
-                <p className="text-xs text-stone-500 font-light leading-relaxed mb-4">
-                  Message a specialist directly — we are happy to answer questions before
-                  you commit to anything.
-                </p>
-
-                <a
-                  href={whatsappLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-2 px-5 py-3 bg-[#c59b67] hover:bg-[#d6aa75] text-[#081726] text-[11px] font-semibold tracking-wider uppercase rounded-lg transition-all"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  <span>WhatsApp a Travel Specialist</span>
-                </a>
-
-                <div className="mt-4 space-y-2 text-xs text-stone-600">
-                  <a
-                    href={`tel:${CONTACT.phoneTel}`}
-                    className="flex items-center gap-2.5 hover:text-[#c59b67] transition-colors"
-                  >
-                    <Phone className="w-3.5 h-3.5 text-[#c59b67]" />
-                    <span>{CONTACT.phoneDisplay}</span>
-                  </a>
-                  <a
-                    href={`mailto:${CONTACT.email}`}
-                    className="flex items-center gap-2.5 hover:text-[#c59b67] transition-colors"
-                  >
-                    <Mail className="w-3.5 h-3.5 text-[#c59b67]" />
-                    <span className="break-all">{CONTACT.email}</span>
-                  </a>
-                </div>
-              </div>
-            </aside>
+            <JourneyEnquiryForm
+              initialDestination={initialDestination}
+              initialTravelType={initialTravelType}
+            />
           </div>
         </div>
       </section>
