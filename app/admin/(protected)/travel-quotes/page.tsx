@@ -64,7 +64,7 @@ export default async function TravelQuotesPage({
           <ClipboardList className="w-10 h-10 text-[#c59b67] mx-auto mb-4" aria-hidden="true" />
           <h2 className="font-serif text-2xl text-[#081726] mb-2">No submissions yet</h2>
           <p className="text-sm text-stone-500 max-w-md mx-auto leading-relaxed">
-            When someone completes the plan-my-journey form, their enquiry will appear here.
+            When someone completes the enquiry form, their enquiry will appear here.
           </p>
         </div>
       ) : (

@@ -12,6 +12,12 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async redirects() {
+    return [
+      { source: "/plan-my-journey", destination: "/enquiry", permanent: true },
+      { source: "/api/plan-my-journey", destination: "/api/enquiry", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

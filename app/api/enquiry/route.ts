@@ -60,7 +60,7 @@ export async function POST(req: Request) {
 
     return Response.json({ ok: true, id: submission.id }, { status: 201 });
   } catch (error) {
-    console.error('Failed to save plan-my-journey submission:', (error as Error)?.message ?? error);
+    console.error('Failed to save enquiry:', (error as Error)?.message ?? error);
     return Response.json({ error: 'Could not save your enquiry. Please try again.' }, { status: 500 });
   }
 }

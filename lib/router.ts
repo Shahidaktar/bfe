@@ -1,8 +1,8 @@
-'use client';
+﻿'use client';
 
 import { usePathname, useRouter } from 'next/navigation';
 
-export const PLAN_PATH = '/plan-my-journey';
+export const PLAN_PATH = '/enquiry';
 
 /** Hook-based navigation: components must call it inside a client component. */
 export function useNavigate() {

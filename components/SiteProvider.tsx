@@ -10,6 +10,7 @@ import { PackageModal } from './PackageModal';
 import { ContactModal } from './ContactModal';
 import { SearchModal } from './SearchModal';
 import { LoginModal } from './LoginModal';
+import { HomeAnnouncementModal } from './HomeAnnouncementModal';
 import { TravelPackage } from './PackagesSection';
 import { getLenis, initLenis, scrollToSection } from '../lib/lenis';
 import { PLAN_PATH, useRoute } from '../lib/router';
@@ -42,6 +43,7 @@ export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({
   const [contactOpen, setContactOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
+  const [homePopupOpen, setHomePopupOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<TravelPackage | null>(null);
   const [prefilledDestination, setPrefilledDestination] = useState('');
   const [prefilledTravelType, setPrefilledTravelType] = useState('');
@@ -50,11 +52,22 @@ export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({
     initLenis();
   }, []);
 
+  // Auto-open the homepage announcement once per homepage visit (after a short delay)
+  useEffect(() => {
+    if (route !== '/') {
+      setHomePopupOpen(false);
+      return;
+    }
+    const timer = window.setTimeout(() => setHomePopupOpen(true), 1200);
+    return () => window.clearTimeout(timer);
+  }, [route]);
+
   const anyModalOpen =
     plannerOpen ||
     contactOpen ||
     searchOpen ||
     loginOpen ||
+    homePopupOpen ||
     selectedPackage !== null;
 
   useEffect(() => {
@@ -125,6 +138,8 @@ export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({
             />
 
             <LoginModal isOpen={loginOpen} onClose={() => setLoginOpen(false)} />
+
+            <HomeAnnouncementModal isOpen={homePopupOpen} onClose={() => setHomePopupOpen(false)} />
           </>
         )}
       </SiteContext.Provider>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+﻿import React, { useEffect, useRef, useState } from 'react';
 import { Check, Send, ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface JourneyEnquiryFormProps {
@@ -180,7 +180,7 @@ export const JourneyEnquiryForm: React.FC<JourneyEnquiryFormProps> = ({
     setSaving(true);
     setSubmitError('');
     try {
-      const res = await fetch('/api/plan-my-journey', {
+      const res = await fetch('/api/enquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
