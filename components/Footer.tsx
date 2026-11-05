@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useEffect, useState } from 'react';
 import { Instagram, Facebook, Youtube, Linkedin, Mail, Phone, ArrowUp } from 'lucide-react';
@@ -13,7 +13,7 @@ import {
 } from '../lib/contact';
 
 export const Footer: React.FC = () => {
-  const { goPlan: onOpenPlanner, openContact: onOpenContact } = useSite();
+  const { openContact: onOpenContact } = useSite();
   const navigate = useNavigate();
   const route = useRoute();
   const scrollToTop = () => {
@@ -158,20 +158,19 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href={sectionHref('#journal')}
+                  href="/create-the-bucketlist"
                   className="hover:text-[#c59b67] transition-colors inline-block"
                 >
                Create Bucket List
                 </a>
               </li>
               <li>
-                <button
-                  type="button"
-                  onClick={onOpenPlanner}
-                  className="hover:text-[#c59b67] transition-colors text-left cursor-pointer inline-block"
+                <a
+                  href="/e-shop"
+                  className="hover:text-[#c59b67] transition-colors inline-block"
                 >
                 E-Shop
-                </button>
+                </a>
               </li>
                 <li>
                 <a

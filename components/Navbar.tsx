@@ -1,8 +1,8 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
 import { useSession, signOut } from 'next-auth/react';
-import { getLenis, scrollTo, scrollToSection } from '../lib/lenis';
+import { scrollTo, scrollToSection } from '../lib/lenis';
 import { useNavigate, useRoute } from '../lib/router';
 import { useSite } from './SiteProvider';
 import { CONTACT, SOCIAL_LINKS, whatsappLink } from '../lib/contact';
@@ -21,6 +21,7 @@ import {
   MessageCircle,
   ChevronRight,
   LogOut,
+  UserRound,
 } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
@@ -69,14 +70,10 @@ export const Navbar: React.FC = () => {
 
   // Lock body scroll when full screen menu is active
   useEffect(() => {
-    const lenis = getLenis();
-
     if (fullScreenMenuOpen) {
       document.body.style.overflow = 'hidden';
-      lenis?.stop();
     } else {
       document.body.style.overflow = '';
-      lenis?.start();
     }
 
     return () => {
@@ -166,15 +163,17 @@ export const Navbar: React.FC = () => {
         { name: 'India', places: ['Rajasthan', 'Kerala', 'Ladakh', 'Goa', 'Himalayas'] },
       ],
     },
-    { label: 'Create Bucket List', href: 'plan' },
-    { label: 'E-Shop' },
+    { label: 'Create Bucket List', href: '/create-the-bucketlist' },
+    { label: 'E-Shop', href: '/e-shop' },
   ];
+
+  const solidHeader = isScrolled || route === '/enquiry' || route.startsWith('/account/bucket-lists');
 
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
+          solidHeader
             ? 'bg-[#081726]/95 backdrop-blur-md shadow-lg py-3 sm:py-3.5 border-b border-white/10'
             : 'bg-gradient-to-b from-black/70 via-black/35 to-transparent py-4 sm:py-5'
         }`}
@@ -221,18 +220,18 @@ export const Navbar: React.FC = () => {
                 src="https://beyondforever.earth/assets/front/img/footer-logo.png"
                 alt="Beyond Forever Earth"
                 className={`object-contain transition-all duration-300 ${
-                  isScrolled ? 'w-6 h-6 sm:w-9 sm:h-9' : 'w-8 h-8 sm:w-14 sm:h-14'
+                  solidHeader ? 'w-6 h-6 sm:w-9 sm:h-9' : 'w-8 h-8 sm:w-14 sm:h-14'
                 }`}
               />
             </div>
                 <div className="hidden sm:flex flex-col text-left">
                   <span className={`font-serif font-semibold tracking-[0.07em] text-white uppercase group-hover:text-[#c59b67] transition-all duration-300 ${
-                    isScrolled ? 'text-xs sm:text-lg' : 'text-sm sm:text-2xl'
+                    solidHeader ? 'text-xs sm:text-lg' : 'text-sm sm:text-2xl'
                   }`}>
                     Beyond
                   </span>
                   <span className={`tracking-[0.28em] text-stone-300 uppercase -mt-0.5 font-light transition-all duration-300 ${
-                    isScrolled ? 'text-[8px] sm:text-[11px]' : 'text-[9px] sm:text-[15px]'
+                    solidHeader ? 'text-[8px] sm:text-[11px]' : 'text-[9px] sm:text-[15px]'
                   }`}>
                     Forever Earth
                   </span>
@@ -263,13 +262,13 @@ export const Navbar: React.FC = () => {
               </button>
 
               {/* Persistent Primary CTA */}
-              <button
-                onClick={onOpenPlanner}
+              <a
+                href='/create-the-bucketlist'
                 className="h-8 sm:h-9 px-3 sm:px-5 rounded-full flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase text-[#081726] bg-gradient-to-r from-[#dfb27d] via-[#c59b67] to-[#b68b55] border border-[#f3e2c0]/70 shadow-[0_0_18px_rgba(197,155,103,0.35)] hover:shadow-[0_0_28px_rgba(197,155,103,0.6)] hover:from-[#e8c697] hover:via-[#d6aa75] hover:to-[#c59b67] active:scale-95 transition-all duration-300 cursor-pointer focus-visible:outline-none shrink-0"
               >
                 <span className="whitespace-nowrap">create bucket list</span>
                 <ArrowRight className="w-3.5 h-3.5 hidden sm:block" />
-              </button>
+              </a>
 
               {/* Account / Sign in */}
               <div className="relative" ref={accountMenuRef}>
@@ -310,6 +309,16 @@ export const Navbar: React.FC = () => {
                         <p className="text-[11px] text-stone-400 truncate">{session.user.email}</p>
                       )}
                     </div>
+                    <button
+                      onClick={() => {
+                        setAccountMenuOpen(false);
+                        navigate('/account');
+                      }}
+                      className="w-full flex items-center gap-2.5 px-4 py-3 text-left text-xs font-medium tracking-wider uppercase text-stone-300 hover:text-[#c59b67] hover:bg-white/5 transition-colors cursor-pointer border-b border-white/10"
+                    >
+                      <UserRound className="w-4 h-4" />
+                      <span>My Bucket Lists</span>
+                    </button>
                     <button
                       onClick={() => {
                         setAccountMenuOpen(false);
@@ -393,18 +402,18 @@ export const Navbar: React.FC = () => {
                 src="https://beyondforever.earth/assets/front/img/footer-logo.png"
                 alt="Beyond Forever Earth"
                 className={`object-contain transition-all duration-300 ${
-                  isScrolled ? 'w-6 h-6 sm:w-9 sm:h-9' : 'w-8 h-8 sm:w-14 sm:h-14'
+                  solidHeader ? 'w-6 h-6 sm:w-9 sm:h-9' : 'w-8 h-8 sm:w-14 sm:h-14'
                 }`}
               />
             </div>
                 <div className="flex flex-col text-left">
                   <span className={`font-serif font-semibold tracking-[0.22em] text-white uppercase group-hover:text-[#c59b67] transition-all duration-300 ${
-                    isScrolled ? 'text-xs sm:text-lg' : 'text-sm sm:text-2xl'
+                    solidHeader ? 'text-xs sm:text-lg' : 'text-sm sm:text-2xl'
                   }`}>
                     Beyond
                   </span>
                   <span className={`tracking-[0.28em] text-stone-300 uppercase -mt-0.5 font-light transition-all duration-300 ${
-                    isScrolled ? 'text-[8px] sm:text-[11px]' : 'text-[9px] sm:text-[15px]'
+                    solidHeader ? 'text-[8px] sm:text-[11px]' : 'text-[9px] sm:text-[15px]'
                   }`}>
                     Forever Earth
                   </span>
@@ -463,6 +472,10 @@ export const Navbar: React.FC = () => {
                               return;
                             }
                             closeFullScreenMenu();
+                            if (item.href?.startsWith('/')) {
+                              navigate(item.href);
+                              return;
+                            }
                             if (item.href === 'plan') {
                               onOpenPlanner();
                               return;
@@ -693,12 +706,22 @@ export const Navbar: React.FC = () => {
                           <span className="text-xs font-semibold text-[#c59b67]">{accountInitial}</span>
                         )}
                       </div>
-                      <div className="min-w-0">
+                      <div className="min-w-0 flex-1">
                         <p className="text-sm text-white truncate">{accountName}</p>
                         {session?.user?.email && (
                           <p className="text-[11px] text-stone-400 truncate">{session.user.email}</p>
                         )}
                       </div>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setFullScreenMenuOpen(false);
+                          navigate('/account');
+                        }}
+                        className="shrink-0 text-[10px] font-semibold tracking-wider uppercase text-[#c59b67] hover:text-[#e8c697] transition-colors cursor-pointer"
+                      >
+                        My Bucket Lists
+                      </button>
                     </div>
                   )}
 

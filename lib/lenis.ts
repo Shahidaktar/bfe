@@ -1,57 +1,49 @@
-import Lenis, { type ScrollToOptions } from 'lenis';
+// Native smooth-scrolling helpers (Lenis removed — it caused intermittent scroll locks).
 
-let lenis: Lenis | null = null;
+export interface ScrollToOptions {
+  offset?: number;
+  immediate?: boolean;
+  behavior?: ScrollBehavior;
+}
 
 export function initLenis() {
-  if (lenis) return;
-
-  lenis = new Lenis({
-    autoRaf: true,
-    lerp: 0.1,
-    smoothWheel: true,
-    wheelMultiplier: 1,
-    touchMultiplier: 1.2,
-    respectReducedMotion: true,
-  });
+  // No-op retained so call sites don't need to change.
 }
 
 export function getLenis() {
-  return lenis;
+  return null;
 }
 
 export function destroyLenis() {
-  lenis?.destroy();
-  lenis = null;
+  // No-op retained so call sites don't need to change.
 }
 
 export function scrollTo(
   target: string | number | HTMLElement,
   options: ScrollToOptions = {}
 ) {
-  if (lenis) {
-    // Page height changes while sections mount; refresh before clamping the target.
-    lenis.resize();
-    lenis.scrollTo(target, options);
-    return;
-  }
-
   const offset = options.offset ?? 0;
-  const element =
-    typeof target === 'string'
-      ? document.querySelector<HTMLElement>(target)
-      : target instanceof HTMLElement
-      ? target
-      : null;
+  const immediate = options.immediate ?? false;
+  const behavior: ScrollBehavior = options.behavior ?? (immediate ? 'auto' : 'smooth');
 
-  if (element) {
-    const top = element.getBoundingClientRect().top + window.scrollY + offset;
-    window.scrollTo({ top, behavior: 'smooth' });
-    return;
-  }
+  let top: number | null = null;
 
   if (typeof target === 'number') {
-    window.scrollTo({ top: target + offset, behavior: 'smooth' });
+    top = target + offset;
+  } else {
+    const element =
+      typeof target === 'string'
+        ? document.querySelector<HTMLElement>(target)
+        : target instanceof HTMLElement
+          ? target
+          : null;
+    if (element) {
+      top = element.getBoundingClientRect().top + window.scrollY + offset;
+    }
   }
+
+  if (top === null) return;
+  window.scrollTo({ top: Math.max(0, top), behavior });
 }
 
 // Section anchors may not exist yet right after a route change, and their offset
@@ -59,7 +51,8 @@ export function scrollTo(
 export function scrollToSection(selector: string, options: ScrollToOptions = {}) {
   const offset = options.offset ?? 0;
   const deadline = Date.now() + 2500;
-  const jump = (top: number) => scrollTo(top, { ...options, immediate: true });
+  const jump = (top: number) =>
+    scrollTo(top, { ...options, immediate: true, behavior: 'auto' });
 
   const attempt = () => {
     const element = document.querySelector<HTMLElement>(selector);

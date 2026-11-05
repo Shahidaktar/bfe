@@ -38,7 +38,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
   const handleGoogleLogin = async () => {
     setLoading(true);
     try {
-      await signIn('google', { redirectTo: window.location.origin });
+      await signIn('google', { redirectTo: window.location.href });
     } catch {
       setLoading(false);
     }

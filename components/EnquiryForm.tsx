@@ -1,5 +1,5 @@
-﻿import React, { useEffect, useRef, useState } from 'react';
-import { Check, Send, ArrowLeft, ArrowRight } from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Check, ArrowRight, ChevronLeft, User, MapPin, Luggage, Sparkles } from 'lucide-react';
 
 interface JourneyEnquiryFormProps {
   initialDestination?: string;
@@ -28,11 +28,11 @@ const DESTINATION_OPTIONS = [
   'Greece',
   'Spain',
   'Portugal',
-  'India — Rajasthan',
-  'India — Kerala',
-  'India — Ladakh',
-  'India — Goa',
-  'India — Himalayas',
+  'India - Rajasthan',
+  'India - Kerala',
+  'India - Ladakh',
+  'India - Goa',
+  'India - Himalayas',
   'Somewhere else / not decided yet',
 ];
 
@@ -71,22 +71,56 @@ const EXPERIENCE_OPTIONS = [
   'Museums / Historic',
 ];
 
-const OTHER_SERVICES_OPTIONS = ['Meals — Lunch / Dinner', 'Veg / Non-Veg'];
+const OTHER_SERVICES_OPTIONS = ['Meals - Lunch / Dinner', 'Veg / Non-Veg'];
 
-const STEPS: { id: Step; label: string; hint: string }[] = [
-  { id: 1, label: 'Traveller', hint: 'Who we should contact' },
-  { id: 2, label: 'Journey', hint: 'Where and when you are travelling' },
-  { id: 3, label: 'Arrangements', hint: 'What you would like us to arrange' },
-  { id: 4, label: 'Other Details', hint: 'Room, experiences and extra services' },
+const STEP_META: { id: Step; title: string; copy: string; icon: typeof User }[] = [
+  {
+    id: 1,
+    title: 'Who is this journey for?',
+    copy: 'Tell us who we are curating this experience for, and how best to reach you.',
+    icon: User,
+  },
+  {
+    id: 2,
+    title: 'Where shall we look?',
+    copy: 'Select the landscape that resonates with your current state of mind.',
+    icon: MapPin,
+  },
+  {
+    id: 3,
+    title: 'How shall it unfold?',
+    copy: 'Hotels, entry tickets, transport — arranged privately, exactly as you prefer.',
+    icon: Luggage,
+  },
+  {
+    id: 4,
+    title: 'The finishing touches.',
+    copy: 'Room views, bedding and the small details that make it unmistakably yours.',
+    icon: Sparkles,
+  },
 ];
 
-const inputClass =
-  'w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg text-sm sm:text-[15px] text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#c59b67] transition-colors';
-const labelClass = 'block text-sm font-semibold text-stone-900 mb-2';
-const errorClass = 'mt-1 text-xs text-red-600';
-
+const field =
+  'w-full bg-transparent border border-stone-300 rounded-md px-4 sm:px-5 py-4 sm:py-[18px] text-base sm:text-[17px] text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-[#081726] transition-colors';
+const labelClass =
+  'block text-[10px] tracking-[0.18em] uppercase text-stone-500 font-semibold mb-2 font-sans';
+const errorClass = 'mt-1.5 text-xs text-red-600';
+const chip =
+  'flex items-center gap-2.5 px-4 py-3 border border-stone-200 rounded-md text-sm text-stone-700 hover:border-[#c59b67] has-checked:border-[#c59b67] has-checked:bg-[#c59b67]/5 cursor-pointer transition-colors select-none';
 const withCurrentValue = (options: string[], value: string) =>
   value && !options.includes(value) ? [value, ...options] : options;
+
+const StepProgressLine: React.FC<{ progress: number }> = ({ progress }) => (
+  <div
+    className="fixed top-0 left-0 right-0 z-[60] h-[3px] bg-white/10 pointer-events-none"
+    aria-hidden="true"
+  >
+    <div
+      className="h-full bg-gradient-to-r from-[#dfb27d] via-[#c59b67] to-[#b68b55] transition-[width] duration-500 ease-out"
+      style={{ width: `${progress}%` }}
+    />
+  </div>
+);
 
 export const JourneyEnquiryForm: React.FC<JourneyEnquiryFormProps> = ({
   initialDestination = '',
@@ -231,480 +265,456 @@ export const JourneyEnquiryForm: React.FC<JourneyEnquiryFormProps> = ({
 
   if (isSubmitted) {
     return (
-      <div className="text-center py-8 space-y-4">
-        <div className="w-16 h-16 rounded-full bg-[#c59b67]/15 text-[#c59b67] flex items-center justify-center mx-auto mb-2">
-          <Check className="w-8 h-8 stroke-[2.5]" />
-        </div>
-        <h4 className="font-serif text-2xl sm:text-3xl text-stone-900 font-normal">
-          Thank You — Your Enquiry Is Received
-        </h4>
-        <p className="text-base text-stone-600 max-w-md mx-auto leading-relaxed">
-          Thank you{fullName ? `, ${fullName}` : ''}. Your travel brief has been recorded.
-          A dedicated travel specialist will be in touch within one business day.
-        </p>
-        <div className="pt-2">
+      <div className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-24">
+        <StepProgressLine progress={100} />
+        <div className="max-w-2xl mx-auto bg-white rounded-2xl border border-stone-200 shadow-sm px-6 sm:px-12 py-14 sm:py-20 text-center">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border border-[#c59b67] flex items-center justify-center mx-auto mb-7 sm:mb-8">
+            <Check className="w-6 h-6 sm:w-7 sm:h-7 text-[#b68b55] stroke-[2.25]" />
+          </div>
+          <h2 className="font-serif italic text-3xl sm:text-4xl text-[#081726] tracking-tight font-normal">
+            We have your brief.
+          </h2>
+          <p className="mt-5 text-sm sm:text-base text-stone-500 max-w-md mx-auto leading-relaxed">
+            Thank you{fullName ? `, ${fullName}` : ''}. A dedicated travel designer will return to
+            you within one business day.
+          </p>
           <button
             onClick={handleDone}
-            className="px-7 py-3 bg-[#c59b67] hover:bg-[#b68b55] text-[#081726] text-sm font-semibold tracking-wider uppercase rounded-lg transition-all cursor-pointer"
+            className="mt-10 inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-[0.28em] uppercase text-[#081726] hover:text-[#b68b55] transition-colors cursor-pointer"
           >
-            Submit Another Enquiry
+            <span>Return</span>
+            <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       </div>
     );
   }
 
-  const current = STEPS.find((item) => item.id === step)!;
+  const meta = STEP_META[step - 1];
+  const StepIcon = meta.icon;
+  const completedProgress = ((step - 1) / STEP_META.length) * 100;
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8">
-      {/* Progress */}
-      <div>
-        <div className="flex items-center gap-2">
-          {STEPS.map((item, index) => {
-            const isComplete = step > item.id;
-            const isCurrent = step === item.id;
-            return (
-              <React.Fragment key={item.id}>
-                <div className="flex items-center gap-2 shrink-0">
-                  <span
-                    className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-semibold transition-colors ${
-                      isComplete || isCurrent
-                        ? 'bg-[#c59b67] text-[#081726]'
-                        : 'bg-stone-100 text-stone-400'
-                    }`}
-                  >
-                    {isComplete ? <Check className="w-3.5 h-3.5 stroke-[3]" /> : item.id}
-                  </span>
-                  <span
-                    className={`hidden sm:block text-[11px] tracking-[0.16em] uppercase font-semibold transition-colors ${
-                      isCurrent ? 'text-stone-900' : 'text-stone-400'
-                    }`}
-                  >
-                    {item.label}
-                  </span>
-                </div>
-                {index < STEPS.length - 1 && (
-                  <span
-                    aria-hidden="true"
-                    className={`flex-1 h-[2px] rounded-full transition-colors ${
-                      step > item.id ? 'bg-[#c59b67]' : 'bg-stone-200'
-                    }`}
+    <form
+      onSubmit={handleSubmit}
+      id="enquiry-form"
+      className="w-full bg-[#FBFAF7] overflow-x-clip"
+    >
+      {step > 1 && <StepProgressLine progress={completedProgress} />}
+
+      <div className="grid lg:grid-cols-[minmax(0,44%)_1fr]">
+        {/* Left panel — the step brief */}
+        <aside className="relative bg-[#FBFAF7] px-7 sm:px-10 lg:px-12 xl:px-14 pt-9 sm:pt-12 lg:pt-28 xl:pt-40 pb-6 lg:pb-16 xl:pb-40 flex flex-col border-b lg:border-b-0 lg:border-r border-stone-200/80 lg:sticky lg:top-0 lg:h-screen lg:self-start lg:overflow-y-auto">
+          <span className="text-[10px] tracking-[0.32em] uppercase text-stone-400 font-sans font-semibold">
+            Travel Qoute
+          </span>
+          <div className="mt-10 lg:mt-16">
+            {/* <StepIcon className="w-6 h-6 lg:w-7 lg:h-7 text-[#081726]" strokeWidth={1.5} /> */}
+            <h2 className="mt-5 lg:mt-7 font-serif italic text-4xl sm:text-5xl xl:text-[54px] leading-[1.08] tracking-tight text-[#081726] max-w-md">
+              {meta.title}
+            </h2>
+            <p className="mt-5 text-sm sm:text-[15px] text-stone-500 leading-relaxed max-w-xs">
+              {meta.copy}
+            </p>
+          </div>
+
+          <div className="hidden lg:flex mt-auto pt-16 items-center gap-3">
+            <span className="text-[10px] tracking-[0.32em] uppercase text-stone-400 font-sans">
+              Beyond Forever Earth
+            </span>
+            <span className="w-6 h-px bg-[#c59b67]" aria-hidden="true" />
+          </div>
+        </aside>
+
+        {/* Right panel — the fields */}
+        <div className="relative bg-[#FBFAF7] px-6 sm:px-10 lg:px-12 xl:px-16 py-9 sm:py-12 lg:py-24 xl:py-40 flex flex-col">
+          <div key={step} className="animate-in fade-in slide-in-from-right-2 duration-300 flex-1">
+            {step === 1 && (
+              <div className="space-y-5 sm:space-y-6">
+                <div>
+                  <label htmlFor="enquiry-name" className={labelClass}>
+                    Full Name *
+                  </label>
+                  <input
+                    id="enquiry-name"
+                    type="text"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    placeholder="Your name"
+                    className={field}
                   />
-                )}
-              </React.Fragment>
-            );
-          })}
-        </div>
-        <p className="mt-4 text-sm text-stone-500 font-light">
-          Step {step} of {STEPS.length}: {current.hint}.
-        </p>
-      </div>
+                  {errors.fullName && <p className={errorClass}>{errors.fullName}</p>}
+                </div>
+                <div>
+                  <label htmlFor="enquiry-phone" className={labelClass}>
+                    Phone
+                  </label>
+                  <input
+                    id="enquiry-phone"
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="+91 98923 44001"
+                    className={field}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="enquiry-email" className={labelClass}>
+                    Email Address *
+                  </label>
+                  <input
+                    id="enquiry-email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@example.com"
+                    className={field}
+                  />
+                  {errors.email && <p className={errorClass}>{errors.email}</p>}
+                </div>
+              </div>
+            )}
 
-      <div key={step} className="animate-in fade-in slide-in-from-right-1 duration-200 space-y-6">
-        {step === 1 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-            <div>
-              <label htmlFor="quote-name" className={labelClass}>
-                Full Name *
-              </label>
-              <input
-                id="quote-name"
-                type="text"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                placeholder="Your Name"
-                className={inputClass}
-              />
-              {errors.fullName && <p className={errorClass}>{errors.fullName}</p>}
-            </div>
+            {step === 2 && (
+              <div className="space-y-5 sm:space-y-6">
+                <div>
+                  <label htmlFor="enquiry-destination" className={labelClass}>
+                    Destination *
+                  </label>
+                  <select
+                    id="enquiry-destination"
+                    value={destination}
+                    onChange={(e) => setDestination(e.target.value)}
+                    className={field}
+                  >
+                    <option value="">Select destination</option>
+                    {withCurrentValue(DESTINATION_OPTIONS, destination).map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.destination && <p className={errorClass}>{errors.destination}</p>}
+                </div>
 
-            <div>
-              <label htmlFor="quote-phone" className={labelClass}>
-                Phone
-              </label>
-              <input
-                id="quote-phone"
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="Phone No."
-                className={inputClass}
-              />
-            </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="enquiry-cities" className={labelClass}>
+                      Cities to Cover
+                    </label>
+                    <input
+                      id="enquiry-cities"
+                      type="text"
+                      value={citiesToCover}
+                      onChange={(e) => setCitiesToCover(e.target.value)}
+                      placeholder="Cities to cover"
+                      className={field}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="enquiry-departure-city" className={labelClass}>
+                      Departure City
+                    </label>
+                    <input
+                      id="enquiry-departure-city"
+                      type="text"
+                      value={departureCity}
+                      onChange={(e) => setDepartureCity(e.target.value)}
+                      placeholder="Departure city"
+                      className={field}
+                    />
+                  </div>
+                </div>
 
-            <div>
-              <label htmlFor="quote-email" className={labelClass}>
-                Email Address *
-              </label>
-              <input
-                id="quote-email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email Address"
-                className={inputClass}
-              />
-              {errors.email && <p className={errorClass}>{errors.email}</p>}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="enquiry-arrival-city" className={labelClass}>
+                      Arrival City
+                    </label>
+                    <input
+                      id="enquiry-arrival-city"
+                      type="text"
+                      value={arrivalCity}
+                      onChange={(e) => setArrivalCity(e.target.value)}
+                      placeholder="Arrival city"
+                      className={field}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="enquiry-departure-date" className={labelClass}>
+                      Departure Date &amp; Time
+                    </label>
+                    <input
+                      id="enquiry-departure-date"
+                      type="datetime-local"
+                      value={departureDate}
+                      onChange={(e) => setDepartureDate(e.target.value)}
+                      className={field}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="enquiry-return-date" className={labelClass}>
+                    Return Date &amp; Time
+                  </label>
+                  <input
+                    id="enquiry-return-date"
+                    type="datetime-local"
+                    value={returnDate}
+                    onChange={(e) => setReturnDate(e.target.value)}
+                    className={field}
+                  />
+                  {errors.returnDate && <p className={errorClass}>{errors.returnDate}</p>}
+                </div>
+              </div>
+            )}
+
+            {step === 3 && (
+              <div className="space-y-5 sm:space-y-6">
+                <div>
+                  <label htmlFor="enquiry-travellers" className={labelClass}>
+                    Who will be Travelling
+                  </label>
+                  <select
+                    id="enquiry-travellers"
+                    value={travellers}
+                    onChange={(e) => setTravellers(e.target.value)}
+                    className={field}
+                  >
+                    <option value="">Select</option>
+                    {TRAVELLER_OPTIONS.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="enquiry-hotel" className={labelClass}>
+                    Hotel with Breakfast
+                  </label>
+                  <select
+                    id="enquiry-hotel"
+                    value={hotelBreakfast}
+                    onChange={(e) => setHotelBreakfast(e.target.value)}
+                    className={field}
+                  >
+                    <option value="">Select</option>
+                    {YES_NO_NOT_SURE.map((option) => (
+                      <option key={option} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="enquiry-sightseeing" className={labelClass}>
+                    Sightseeing (Entry Tickets)
+                  </label>
+                  <input
+                    id="enquiry-sightseeing"
+                    type="text"
+                    value={sightseeing}
+                    onChange={(e) => setSightseeing(e.target.value)}
+                    placeholder="Sightseeing (Entry Tickets)"
+                    className={field}
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="enquiry-visa" className={labelClass}>
+                      Visa (Tourist Visa)
+                    </label>
+                    <select
+                      id="enquiry-visa"
+                      value={visa}
+                      onChange={(e) => setVisa(e.target.value)}
+                      className={field}
+                    >
+                      <option value="">Select</option>
+                      {YES_NO_NOT_SURE.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="enquiry-transport" className={labelClass}>
+                      Transport (Private Car, SIC)
+                    </label>
+                    <select
+                      id="enquiry-transport"
+                      value={transport}
+                      onChange={(e) => setTransport(e.target.value)}
+                      className={field}
+                    >
+                      <option value="">Select</option>
+                      {TRANSPORT_OPTIONS.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {step === 4 && (
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="enquiry-room-view" className={labelClass}>
+                      Preferred Room View
+                    </label>
+                    <select
+                      id="enquiry-room-view"
+                      value={roomView}
+                      onChange={(e) => setRoomView(e.target.value)}
+                      className={field}
+                    >
+                      <option value="">Select</option>
+                      {ROOM_VIEW_OPTIONS.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="enquiry-bedding" className={labelClass}>
+                      Preferred Bedding
+                    </label>
+                    <select
+                      id="enquiry-bedding"
+                      value={bedding}
+                      onChange={(e) => setBedding(e.target.value)}
+                      className={field}
+                    >
+                      <option value="">Select</option>
+                      {BEDDING_OPTIONS.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <p className={labelClass}>Vacation Experience</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {EXPERIENCE_OPTIONS.map((option) => (
+                      <label key={option} className={chip}>
+                        <input
+                          type="checkbox"
+                          checked={experiences.includes(option)}
+                          onChange={() => setExperiences((prev) => toggleInArray(prev, option))}
+                          className="w-4 h-4 rounded accent-[#c59b67] cursor-pointer"
+                        />
+                        <span>{option}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <p className={labelClass}>Other Services Needed</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {OTHER_SERVICES_OPTIONS.map((option) => (
+                      <label key={option} className={chip}>
+                        <input
+                          type="checkbox"
+                          checked={otherServices.includes(option)}
+                          onChange={() => setOtherServices((prev) => toggleInArray(prev, option))}
+                          className="w-4 h-4 rounded accent-[#c59b67] cursor-pointer"
+                        />
+                        <span>{option}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <p className={labelClass}>Do you want travel insurance?</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {(['Yes', 'No'] as const).map((option) => (
+                      <label key={option} className={chip}>
+                        <input
+                          type="radio"
+                          name="travel-insurance"
+                          checked={travelInsurance === option}
+                          onChange={() => setTravelInsurance(option)}
+                          className="w-4 h-4 accent-[#c59b67] cursor-pointer"
+                        />
+                        <span>{option}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                <label className="flex items-center gap-2.5 text-xs sm:text-sm text-stone-500 cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    checked={saveDetails}
+                    onChange={(e) => setSaveDetails(e.target.checked)}
+                    className="w-4 h-4 rounded accent-[#c59b67] cursor-pointer"
+                  />
+                  <span>Save my email address &amp; name for future contact.</span>
+                </label>
+
+                {submitError && <p className={errorClass}>{submitError}</p>}
+              </div>
+            )}
+          </div>
+
+          {/* Controls */}
+          <div className="mt-8 lg:mt-auto pt-6 flex items-center justify-between gap-4">
+            {step > 1 ? (
+              <button
+                type="button"
+                onClick={goBack}
+                className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold tracking-[0.28em] uppercase text-stone-500 hover:text-[#081726] transition-colors cursor-pointer"
+              >
+                <ChevronLeft className="w-4 h-4" />
+                <span>Back</span>
+              </button>
+            ) : (
+              <span />
+            )}
+
+            <div className="flex items-center gap-6">
+              <span className="text-[10px] sm:text-[11px] tracking-[0.32em] uppercase text-stone-400 tabular-nums">
+                0{step} / 0{STEP_META.length}
+              </span>
+              {step < STEP_META.length ? (
+                <button
+                  type="button"
+                  onClick={goNext}
+                  className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold tracking-[0.28em] uppercase text-[#081726] hover:text-[#b68b55] transition-colors cursor-pointer"
+                >
+                  <span>Proceed</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  disabled={saving}
+                  className="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold tracking-[0.28em] uppercase text-[#081726] hover:text-[#b68b55] disabled:opacity-50 disabled:cursor-wait transition-colors cursor-pointer"
+                >
+                  <span>{saving ? 'Submitting' : 'Submit'}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              )}
             </div>
           </div>
-        )}
-
-        {step === 2 && (
-          <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-              <div>
-                <label htmlFor="quote-destination" className={labelClass}>
-                  Destination *
-                </label>
-                <select
-                  id="quote-destination"
-                  value={destination}
-                  onChange={(e) => setDestination(e.target.value)}
-                  className={inputClass}
-                >
-                  <option value="">Select destination</option>
-                  {withCurrentValue(DESTINATION_OPTIONS, destination).map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-                {errors.destination && <p className={errorClass}>{errors.destination}</p>}
-              </div>
-
-              <div>
-                <label htmlFor="quote-cities" className={labelClass}>
-                  Cities to Cover
-                </label>
-                <input
-                  id="quote-cities"
-                  type="text"
-                  value={citiesToCover}
-                  onChange={(e) => setCitiesToCover(e.target.value)}
-                  placeholder="Cities to cover"
-                  className={inputClass}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="quote-departure-city" className={labelClass}>
-                  Departure City
-                </label>
-                <input
-                  id="quote-departure-city"
-                  type="text"
-                  value={departureCity}
-                  onChange={(e) => setDepartureCity(e.target.value)}
-                  placeholder="Departure City"
-                  className={inputClass}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="quote-departure-date" className={labelClass}>
-                  Departure Date &amp; Time
-                </label>
-                <input
-                  id="quote-departure-date"
-                  type="datetime-local"
-                  value={departureDate}
-                  onChange={(e) => setDepartureDate(e.target.value)}
-                  className={inputClass}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="quote-arrival-city" className={labelClass}>
-                  Arrival City
-                </label>
-                <input
-                  id="quote-arrival-city"
-                  type="text"
-                  value={arrivalCity}
-                  onChange={(e) => setArrivalCity(e.target.value)}
-                  placeholder="Arrival City"
-                  className={inputClass}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="quote-return-date" className={labelClass}>
-                  Return Date &amp; Time
-                </label>
-                <input
-                  id="quote-return-date"
-                  type="datetime-local"
-                  value={returnDate}
-                  onChange={(e) => setReturnDate(e.target.value)}
-                  className={inputClass}
-                />
-                {errors.returnDate && <p className={errorClass}>{errors.returnDate}</p>}
-              </div>
-            </div>
-          </>
-        )}
-
-        {step === 3 && (
-          <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-              <div>
-                <label htmlFor="quote-travellers" className={labelClass}>
-                  Who will be Travelling
-                </label>
-                <select
-                  id="quote-travellers"
-                  value={travellers}
-                  onChange={(e) => setTravellers(e.target.value)}
-                  className={inputClass}
-                >
-                  <option value="">Select</option>
-                  {TRAVELLER_OPTIONS.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="quote-hotel" className={labelClass}>
-                  Hotel with Breakfast
-                </label>
-                <select
-                  id="quote-hotel"
-                  value={hotelBreakfast}
-                  onChange={(e) => setHotelBreakfast(e.target.value)}
-                  className={inputClass}
-                >
-                  <option value="">Select</option>
-                  {YES_NO_NOT_SURE.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="quote-sightseeing" className={labelClass}>
-                  Sightseeing (Entry Tickets)
-                </label>
-                <input
-                  id="quote-sightseeing"
-                  type="text"
-                  value={sightseeing}
-                  onChange={(e) => setSightseeing(e.target.value)}
-                  placeholder="Sightseeing (Entry Tickets)"
-                  className={inputClass}
-                />
-              </div>
-
-              <div>
-                <label htmlFor="quote-visa" className={labelClass}>
-                  Visa (Tourist Visa)
-                </label>
-                <select
-                  id="quote-visa"
-                  value={visa}
-                  onChange={(e) => setVisa(e.target.value)}
-                  className={inputClass}
-                >
-                  <option value="">Select</option>
-                  {YES_NO_NOT_SURE.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="quote-transport" className={labelClass}>
-                  Transport (Private Car, SIC)
-                </label>
-                <select
-                  id="quote-transport"
-                  value={transport}
-                  onChange={(e) => setTransport(e.target.value)}
-                  className={inputClass}
-                >
-                  <option value="">Select</option>
-                  {TRANSPORT_OPTIONS.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </>
-        )}
-
-        {step === 4 && (
-          <>
-            <div>
-              <p className="text-[11px] tracking-[0.22em] text-[#c59b67] uppercase font-semibold mb-4">
-                Other Details
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="quote-room-view" className={labelClass}>
-                    Preferred Room View
-                  </label>
-                  <select
-                    id="quote-room-view"
-                    value={roomView}
-                    onChange={(e) => setRoomView(e.target.value)}
-                    className={inputClass}
-                  >
-                    <option value="">Select</option>
-                    {ROOM_VIEW_OPTIONS.map((option) => (
-                      <option key={option} value={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="quote-bedding" className={labelClass}>
-                    Preferred Bedding
-                  </label>
-                  <select
-                    id="quote-bedding"
-                    value={bedding}
-                    onChange={(e) => setBedding(e.target.value)}
-                    className={inputClass}
-                  >
-                    <option value="">Select</option>
-                    {BEDDING_OPTIONS.map((option) => (
-                      <option key={option} value={option}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-2 border-t border-stone-200">
-              <p className="text-[11px] tracking-[0.22em] text-[#c59b67] uppercase font-semibold mb-4">
-                Vacation Experience
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2.5">
-                {EXPERIENCE_OPTIONS.map((option) => (
-                  <label
-                    key={option}
-                    className="flex items-center gap-2.5 text-sm text-stone-700 cursor-pointer"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={experiences.includes(option)}
-                      onChange={() => setExperiences((prev) => toggleInArray(prev, option))}
-                      className="w-4 h-4 rounded accent-[#c59b67] cursor-pointer"
-                    />
-                    <span>{option}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div className="pt-2 border-t border-stone-200">
-              <p className="text-[11px] tracking-[0.22em] text-[#c59b67] uppercase font-semibold mb-4">
-                Other Services Needed
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {OTHER_SERVICES_OPTIONS.map((option) => (
-                  <label
-                    key={option}
-                    className="flex items-center gap-2.5 text-sm text-stone-700 cursor-pointer"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={otherServices.includes(option)}
-                      onChange={() => setOtherServices((prev) => toggleInArray(prev, option))}
-                      className="w-4 h-4 rounded accent-[#c59b67] cursor-pointer"
-                    />
-                    <span>{option}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div className="pt-2 border-t border-stone-200">
-              <p className={labelClass}>Do you want travel insurance?</p>
-              <div className="flex flex-wrap items-center gap-5">
-                {(['Yes', 'No'] as const).map((option) => (
-                  <label
-                    key={option}
-                    className="flex items-center gap-2.5 text-sm text-stone-700 cursor-pointer"
-                  >
-                    <input
-                      type="radio"
-                      name="travel-insurance"
-                      checked={travelInsurance === option}
-                      onChange={() => setTravelInsurance(option)}
-                      className="w-4 h-4 accent-[#c59b67] cursor-pointer"
-                    />
-                    <span>{option}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <label className="flex items-start gap-2.5 text-sm text-stone-600 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={saveDetails}
-                onChange={(e) => setSaveDetails(e.target.checked)}
-                className="mt-0.5 w-4 h-4 rounded accent-[#c59b67] cursor-pointer"
-              />
-              <span>Save my email address &amp; name when I contact you further next time.</span>
-            </label>
-          </>
-        )}
+        </div>
       </div>
-
-      {/* Navigation */}
-      <div className="pt-3 flex items-center justify-between gap-3 border-t border-stone-200">
-        {step > 1 ? (
-          <button
-            type="button"
-            onClick={goBack}
-            className="inline-flex items-center gap-1.5 text-sm text-stone-500 hover:text-stone-900 transition-colors cursor-pointer"
-          >
-            <ArrowLeft className="w-3.5 h-3.5" />
-            <span>Back</span>
-          </button>
-        ) : (
-          <span />
-        )}
-
-        {step < 4 ? (
-          <button
-            type="button"
-            onClick={goNext}
-            className="inline-flex items-center gap-1.5 px-7 py-3 bg-[#081726] hover:bg-[#0c2238] text-white text-sm font-semibold tracking-wider uppercase rounded-lg transition-all cursor-pointer"
-          >
-            <span>Continue</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
-        ) : (
-          <button
-            type="submit"
-            disabled={saving}
-            className="px-7 py-3 bg-[#c59b67] hover:bg-[#b68b55] disabled:opacity-60 disabled:cursor-wait text-[#081726] text-sm font-semibold tracking-wider uppercase rounded-lg transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
-          >
-            <Send className="w-3.5 h-3.5" />
-            <span>{saving ? 'Submitting…' : 'Submit'}</span>
-          </button>
-        )}
-      </div>
-
-      {submitError && (
-        <p className="text-sm text-red-600 text-right leading-relaxed">{submitError}</p>
-      )}
     </form>
   );
 };

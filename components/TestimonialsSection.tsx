@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+﻿import React, { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface TestimonialItem {
@@ -45,6 +45,7 @@ export const TestimonialsSection: React.FC = () => {
   const [displayIndex, setDisplayIndex] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
   const [direction, setDirection] = useState<'next' | 'prev'>('next');
+  const [paused, setPaused] = useState(false);
   const transitionTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   // Clean up timer on unmount
@@ -95,10 +96,23 @@ export const TestimonialsSection: React.FC = () => {
     changeTestimonial(nextIdx, 'next');
   };
 
+  // Auto-advance every 6s; paused on hover/focus, and the timer restarts
+  // whenever the slide changes (including manual navigation).
+  const handleNextRef = useRef(handleNext);
+  useEffect(() => {
+    handleNextRef.current = handleNext;
+  });
+
+  useEffect(() => {
+    if (paused) return;
+    const id = window.setInterval(() => handleNextRef.current(), 6000);
+    return () => window.clearInterval(id);
+  }, [paused, activeIndex]);
+
   const current = TESTIMONIALS_DATA[displayIndex];
 
   return (
-    <section id="journal" className="py-24 sm:py-32 lg:py-36 bg-[#081726] relative overflow-hidden">
+    <section id="journal" className="py-24 sm:py-32 lg:py-36 bg-[#081726] relative overflow-hidden" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocus={() => setPaused(true)} onBlur={() => setPaused(false)}>
       {/* Subtle ambient luxury glows */}
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#c59b67]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 left-0 w-[450px] h-[450px] bg-white/5 rounded-full blur-3xl pointer-events-none" />

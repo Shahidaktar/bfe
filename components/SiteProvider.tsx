@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -12,7 +12,7 @@ import { SearchModal } from './SearchModal';
 import { LoginModal } from './LoginModal';
 import { HomeAnnouncementModal } from './HomeAnnouncementModal';
 import { TravelPackage } from './PackagesSection';
-import { getLenis, initLenis, scrollToSection } from '../lib/lenis';
+import { scrollToSection } from '../lib/lenis';
 import { PLAN_PATH, useRoute } from '../lib/router';
 
 interface SiteContextValue {
@@ -48,10 +48,6 @@ export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({
   const [prefilledDestination, setPrefilledDestination] = useState('');
   const [prefilledTravelType, setPrefilledTravelType] = useState('');
 
-  useEffect(() => {
-    initLenis();
-  }, []);
-
   // Auto-open the homepage announcement once per homepage visit (after a short delay)
   useEffect(() => {
     if (route !== '/') {
@@ -71,13 +67,15 @@ export const SiteProvider: React.FC<{ children: React.ReactNode }> = ({
     selectedPackage !== null;
 
   useEffect(() => {
-    const lenis = getLenis();
-    if (!lenis) return;
+    const { body } = document;
     if (anyModalOpen) {
-      lenis.stop();
+      body.style.overflow = 'hidden';
     } else {
-      lenis.start();
+      body.style.overflow = '';
     }
+    return () => {
+      body.style.overflow = '';
+    };
   }, [anyModalOpen]);
 
   const openPlanner = (destination = '', travelType = '') => {

@@ -45,13 +45,13 @@ export const TravelInspirationSection: React.FC<TravelInspirationSectionProps> =
             <div className="flex items-center gap-3 mb-3.5">
               <span className="w-8 h-[1px] bg-[#c59b67]" />
               <span className="text-[10px] sm:text-[11px] tracking-[0.28em] font-semibold text-[#c59b67] uppercase font-sans">
-                Travel Experiences
+                Signature Experiences
               </span>
             </div>
 
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl tracking-tight text-[#081726] leading-[1.08]">
-              More Travel{' '}
-              <span className="italic font-normal text-[#c59b67]">Inspiration</span>
+              Moments{' '}
+              <span className="italic font-normal text-[#c59b67]">Worth the Journey</span>
             </h2>
           </div>
 
