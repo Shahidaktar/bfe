@@ -38,7 +38,7 @@ export default async function TravelAssessmentPage() {
       <section className="relative overflow-hidden bg-[#05131f] pt-32 pb-16 sm:pt-40 sm:pb-20">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://vrfacwizigigcpowkrye.supabase.co/storage/v1/object/public/beyond/beyondbanner.jpeg"
+            src="https://res.cloudinary.com/dnm6dyuaw/image/upload/v1794056940/Untitled-1.jpg_dmaxg6.jpg"
             alt="A sweeping view over a coastline at golden hour"
             className="w-full h-full object-cover opacity-60"
           />

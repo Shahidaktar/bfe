@@ -30,7 +30,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
           className="w-full h-full object-cover pointer-events-none"
-          src="https://vrfacwizigigcpowkrye.supabase.co/storage/v1/object/public/beyond/4010511-hd_1920_1080_25fps.mp4"
+          src="https://res.cloudinary.com/dnm6dyuaw/video/upload/v1794056830/4010511-hd_1920_1080_25fps_pvho73.mp4"
           autoPlay
           muted
           loop
