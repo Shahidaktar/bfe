@@ -34,7 +34,7 @@ export default async function AccountPage() {
       <section className="relative overflow-hidden bg-[#081726] pt-32 pb-14 sm:pt-40 sm:pb-16">
         <div className="absolute inset-0 z-0" aria-hidden="true">
           <img
-            src="https://vrfacwizigigcpowkrye.supabase.co/storage/v1/object/public/beyond/beyondbanner.jpeg"
+            src="https://res.cloudinary.com/dnm6dyuaw/image/upload/v1794056940/Untitled-1.jpg_dmaxg6.jpg"
             alt="A private island seen from above, surrounded by turquoise water"
             className="w-full h-full object-cover opacity-55"
           />
