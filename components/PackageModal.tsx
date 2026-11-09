@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { X, Check, MapPin, Calendar, ArrowRight, Sparkles } from 'lucide-react';
 import { TravelPackage } from './PackagesSection';
 
@@ -90,6 +91,20 @@ export const PackageModal: React.FC<PackageModalProps> = ({
               ))}
             </ul>
           </div>
+
+          {/* Full itinerary page, when this journey has one */}
+          {pkg.itinerarySlug && (
+            <Link
+              href={`/luxury-travel/${pkg.itinerarySlug}`}
+              onClick={onClose}
+              className="group flex items-center justify-between gap-3 rounded-xl border border-[#c59b67]/40 bg-[#c59b67]/5 px-4 py-3.5 transition-colors hover:border-[#c59b67] hover:bg-[#c59b67]/10"
+            >
+              <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#8a6a35]">
+                View the full day-by-day itinerary
+              </span>
+              <ArrowRight className="w-4 h-4 shrink-0 text-[#c59b67] transition-transform group-hover:translate-x-1" />
+            </Link>
+          )}
 
           {/* Pricing & Booking Row */}
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-stone-200">

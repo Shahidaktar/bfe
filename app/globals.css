@@ -117,3 +117,156 @@ textarea:focus-visible {
 }
 
 
+
+/* ---- Leaflet route map (Esri street tiles) ---- */
+/* Keep Leaflet's high internal z-indexes (panes/controls/popup) inside their own
+   stacking context so they can never paint over the sticky/fixed navbars. */
+.travel-map {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.travel-map .leaflet-container {
+  background: #f4f0e7;
+  font-family: var(--font-sans);
+  outline: none;
+}
+
+.travel-map .leaflet-tile-pane {
+  filter: grayscale(1) sepia(0.24) brightness(1.03) contrast(0.94);
+}
+
+.travel-map .leaflet-control-zoom {
+  border: 1px solid rgba(197, 155, 103, 0.55);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px -20px rgba(8, 23, 38, 0.85);
+}
+
+.travel-map .leaflet-control-zoom a {
+  color: #081726;
+  background: rgba(255, 255, 255, 0.95);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+.travel-map .leaflet-control-zoom a:hover {
+  background: #f5f2eb;
+  color: #8a6a35;
+}
+
+.travel-map .leaflet-control-attribution {
+  background: rgba(250, 248, 245, 0.85);
+  color: #8a8377;
+  font-size: 9px;
+  padding: 2px 6px;
+  border-top-left-radius: 6px;
+}
+
+.travel-map .leaflet-control-attribution a {
+  color: #8a6a35;
+}
+
+.travel-pin {
+  background: transparent;
+  border: 0;
+}
+
+/* Classic map pin: round head, pointed tail, tip anchored on the stop */
+.travel-pin__drop {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 44px;
+  transition: transform 0.2s ease;
+}
+
+.travel-pin__drop::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 16px;
+  height: 16px;
+  background: #a97f47;
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 0 0 2px 0;
+}
+
+.travel-pin__drop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(150deg, #d9ae79 0%, #c59b67 55%, #a97f47 100%);
+  border: 2px solid #ffffff;
+  box-shadow: 0 10px 18px -8px rgba(8, 23, 38, 0.55);
+  z-index: 1;
+}
+
+.travel-pin__drop > span {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.travel-pin:hover .travel-pin__drop {
+  transform: scale(1.08);
+  transform-origin: 50% 100%;
+}
+
+.travel-pin:hover .travel-pin__drop::before {
+  background: linear-gradient(150deg, #16324e 0%, #081726 100%);
+}
+
+.travel-pin:hover .travel-pin__drop::after {
+  background: #081726;
+}
+
+.travel-popup .leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  border: 1px solid rgba(197, 155, 103, 0.45);
+  box-shadow: 0 18px 40px -26px rgba(8, 23, 38, 0.6);
+  background: #ffffff;
+}
+
+.travel-popup .leaflet-popup-content {
+  margin: 12px 16px;
+  line-height: 1.4;
+}
+
+.travel-popup .leaflet-popup-tip {
+  border: 1px solid rgba(197, 155, 103, 0.45);
+  background: #ffffff;
+}
+
+.travel-popup__day {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #b68b55;
+  margin: 0 0 4px;
+}
+
+.travel-popup__title {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  color: #081726;
+  margin: 0;
+}

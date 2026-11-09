@@ -1,10 +1,11 @@
-﻿'use client';
+'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { scrollTo, scrollToSection } from '../lib/lenis';
 import { useNavigate, useRoute } from '../lib/router';
 import { useSite } from './SiteProvider';
+import { subscribeChrome } from '../lib/chrome';
 import { CONTACT, SOCIAL_LINKS, whatsappLink } from '../lib/contact';
 import {
   Search,
@@ -30,6 +31,11 @@ export const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const route = useRoute();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [hideChrome, setHideChrome] = useState(false);
+
+  // Pages that render their own sticky section nav ask the navbar to step away
+  // while scrolling down, and to return as soon as the reader scrolls back up.
+  useEffect(() => subscribeChrome((chrome) => setHideChrome(chrome.navHidden)), []);
   const [fullScreenMenuOpen, setFullScreenMenuOpen] = useState(false);
   const [accountMenuOpen, setAccountMenuOpen] = useState(false);
   const [avatarFailed, setAvatarFailed] = useState(false);
@@ -173,6 +179,8 @@ export const Navbar: React.FC = () => {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          hideChrome ? '-translate-y-full' : 'translate-y-0'
+        } ${
           solidHeader
             ? 'bg-[#081726]/95 backdrop-blur-md shadow-lg py-3 sm:py-3.5 border-b border-white/10'
             : 'bg-gradient-to-b from-black/70 via-black/35 to-transparent py-4 sm:py-5'
