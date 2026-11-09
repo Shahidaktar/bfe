@@ -3,6 +3,8 @@ import { ArrowUpRight } from 'lucide-react';
 
 export interface TravelPackage {
   id: string;
+  /** When set, the package modal links to a full /luxury-travel itinerary page. */
+  itinerarySlug?: string;
   title: string;
   categoryTag?: string;
   tagline: string;
@@ -24,7 +26,7 @@ export const PACKAGES_DATA: TravelPackage[] = [
     categoryTag: 'CENTRAL ASIA',
     tagline:
       'A 15-day overland journey through all five Stans, from Ashgabat to Almaty.',
-    image: pexels('36003363'),
+    image: '/travel/kyrgyzstan.jpg',
     duration: '15 Days / 14 Nights',
     locations: ['Ashgabat', 'Bukhara', 'Samarkand', 'Bishkek', 'Almaty'],
     price: 'On Request',
@@ -39,11 +41,12 @@ export const PACKAGES_DATA: TravelPackage[] = [
   },
   {
     id: 'ultimate-five-stans',
+    itinerarySlug: 'the-best-of-the-five-stan-tour',
     title: 'The Ultimate 5 Stans Adventure',
     categoryTag: 'GRAND TOUR',
     tagline:
       'A 22-day grand tour from Bishkek to Ashgabat across mountains, yurts and Silk Road cities.',
-    image: pexels('5662219'),
+    image: '/travel/five-stans-hero.jpg',
     duration: '22 Days / 21 Nights',
     locations: ['Bishkek', 'Issyk-Kul', 'Almaty', 'Dushanbe', 'Samarkand', 'Khiva', 'Ashgabat'],
     price: 'On Request',
@@ -62,7 +65,7 @@ export const PACKAGES_DATA: TravelPackage[] = [
     categoryTag: 'SILK ROAD',
     tagline:
       'A 22-day Silk Road passage through Central Asia’s greatest cities and wild landscapes.',
-    image: pexels('30850916'),
+    image: '/travel/uzbekistan.jpg',
     duration: '22 Days / 21 Nights',
     locations: ['Bishkek', 'Karakol', 'Almaty', 'Dushanbe', 'Samarkand', 'Bukhara', 'Khiva', 'Ashgabat'],
     price: 'On Request',
