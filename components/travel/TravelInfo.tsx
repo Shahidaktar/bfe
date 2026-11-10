@@ -40,10 +40,10 @@ export const TravelInfo: React.FC<{ itinerary: TravelItinerary }> = ({ itinerary
             Know before <span className="italic text-[#c59b67]">you go</span>
           </h2>
 
-          <p className="mt-4 text-sm sm:text-[15px] text-stone-500 leading-[1.9] font-light">
+          {/* <p className="mt-4 text-sm sm:text-[15px] text-stone-500 leading-[1.9] font-light">
             Money, safety, visas, seasons and health — country by country, for the five
             countries this journey passes through.
-          </p>
+          </p> */}
         </div>
 
         <div className="mt-9 space-y-3">
@@ -96,9 +96,9 @@ export const TravelInfo: React.FC<{ itinerary: TravelItinerary }> = ({ itinerary
           })}
         </div>
 
-        <p className="mt-6 max-w-3xl text-xs text-stone-400 leading-relaxed font-light italic">
+        {/* <p className="mt-6 max-w-3xl text-xs text-stone-400 leading-relaxed font-light italic">
           {itinerary.travelInfoNote}
-        </p>
+        </p> */}
       </div>
     </section>
   );

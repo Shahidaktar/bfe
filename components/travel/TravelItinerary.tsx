@@ -78,10 +78,10 @@ export const TravelItinerary: React.FC<{ itinerary: Itinerary }> = ({ itinerary 
             Twenty-two days, <span className="italic text-[#c59b67]">one route</span>
           </h2>
 
-          <p className="mt-5 text-sm sm:text-[15px] text-stone-500 leading-[1.9] font-light">
+          {/* <p className="mt-5 text-sm sm:text-[15px] text-stone-500 leading-[1.9] font-light">
             Every day below is written the way we would travel it — where you sleep, what
             is included and how far you move. Choose a country to open its days.
-          </p>
+          </p> */}
         </div>
 
         {/* At a glance */}

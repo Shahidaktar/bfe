@@ -106,7 +106,7 @@ export const TravelSectionNav: React.FC = () => {
                 type="button"
                 onClick={() => goTo(section.id)}
                 aria-current={isActive ? 'true' : undefined}
-                className={`relative shrink-0 py-[18px] text-[11px] font-semibold uppercase tracking-[0.18em] font-sans transition-colors cursor-pointer focus-visible:outline-none sm:text-[12px] ${
+                className={`relative shrink-0 py-[18px] text-[14px] font-semibold uppercase tracking-[0.18em] font-sans transition-colors cursor-pointer focus-visible:outline-none sm:text-[17px] ${
                   compact
                     ? isActive
                       ? 'text-[#e8c697]'

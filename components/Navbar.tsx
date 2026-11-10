@@ -150,14 +150,20 @@ export const Navbar: React.FC = () => {
     label: string;
     href?: string;
     key?: string;
-    children?: string[];
+    children?: { label: string; href: string }[];
     regions?: { name: string; places: string[] }[];
   }[] = [
     { label: 'Home', href: '#home' },
     {
       label: 'About Us',
       key: 'about',
-      children: ['Who We Are', 'What We Do', 'Who Are We For', 'What to Expect', 'How We Work'],
+      children: [
+        { label: 'Who We Are', href: '/about#who-we-are' },
+        { label: 'What We Do', href: '/about#what-we-do' },
+        { label: 'Who Are We For', href: '/about#who-are-we-for' },
+        { label: 'What to Expect', href: '/about#what-to-expect' },
+        { label: 'How We Work', href: '/about#how-we-work' },
+      ],
     },
     {
       label: 'Travel Itineraries',
@@ -523,13 +529,17 @@ export const Navbar: React.FC = () => {
                         {item.key && isActive && (
                           <div className="lg:hidden mt-2 mb-3 ml-9 pl-4 border-l border-white/15 space-y-1">
                             {item.key === 'about' &&
-                              item.children?.map((label) => (
+                              item.children?.map((child) => (
                                 <button
-                                  key={label}
+                                  key={child.href}
                                   type="button"
-                                  className="block text-left text-base sm:text-lg text-stone-300 hover:text-[#c59b67] py-1 cursor-pointer"
+                                  onClick={() => {
+                                    setFullScreenMenuOpen(false);
+                                    navigate(child.href);
+                                  }}
+                                  className="block w-full text-left text-base sm:text-lg text-stone-300 hover:text-[#c59b67] py-1 cursor-pointer"
                                 >
-                                  {label}
+                                  {child.label}
                                 </button>
                               ))}
 
@@ -583,10 +593,17 @@ export const Navbar: React.FC = () => {
                         <div>
                           <span className="text-[9px] sm:text-[10px] tracking-[0.24em] uppercase text-[#c59b67] font-semibold font-sans block mb-4 sm:mb-5">About Us</span>
                           <ul className="flex flex-col space-y-2 sm:space-y-3">
-                            {MENU_ITEMS.find((m) => m.key === 'about')?.children?.map((label) => (
-                              <li key={label}>
-                                <button type="button" className="group flex items-baseline text-left py-1.5 cursor-pointer">
-                                  <span className="font-serif text-2xl sm:text-3xl text-stone-200 tracking-tight group-hover:text-[#c59b67] group-hover:translate-x-2 transition-all">{label}</span>
+                            {MENU_ITEMS.find((m) => m.key === 'about')?.children?.map((child) => (
+                              <li key={child.href}>
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setFullScreenMenuOpen(false);
+                                    navigate(child.href);
+                                  }}
+                                  className="group flex items-baseline text-left py-1.5 cursor-pointer"
+                                >
+                                  <span className="font-serif text-2xl sm:text-3xl text-stone-200 tracking-tight group-hover:text-[#c59b67] group-hover:translate-x-2 transition-all">{child.label}</span>
                                 </button>
                               </li>
                             ))}

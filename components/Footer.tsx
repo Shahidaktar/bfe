@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useEffect, useState } from 'react';
 import { Instagram, Facebook, Youtube, Linkedin, Mail, Phone, ArrowUp } from 'lucide-react';
@@ -134,7 +134,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 sm:space-y-3.5 text-[15px] sm:text-base font-medium text-stone-200">
               <li>
                 <a
-                  href={sectionHref('#inspiration')}
+                  href="/about"
                   className="hover:text-[#c59b67] transition-colors inline-block"
                 >
                   About Us

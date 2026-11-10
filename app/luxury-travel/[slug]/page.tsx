@@ -9,6 +9,7 @@ import { TravelPrice } from '../../../components/travel/TravelPrice';
 import { TravelInfo } from '../../../components/travel/TravelInfo';
 import { TravelReviews } from '../../../components/travel/TravelReviews';
 import { TravelRelated } from '../../../components/travel/TravelRelated';
+import { TravelStickyCta } from '../../../components/travel/TravelStickyCta';
 import { StayInspiredSection } from '../../../components/StayInspiredSection';
 
 export function generateStaticParams() {
@@ -62,6 +63,7 @@ export default async function LuxuryTravelPage({
       <TravelInfo itinerary={itinerary} />
       <TravelReviews />
       <TravelRelated packageIds={itinerary.relatedPackageIds} />
+      <TravelStickyCta />
       {/* <StayInspiredSection /> */}
     </article>
   );
