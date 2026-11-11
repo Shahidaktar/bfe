@@ -62,7 +62,7 @@ export default async function LuxuryTravelPage({
       <TravelPrice itinerary={itinerary} />
       <TravelInfo itinerary={itinerary} />
       <TravelReviews />
-      <TravelRelated packageIds={itinerary.relatedPackageIds} />
+      <TravelRelated packageIds={itinerary.relatedPackageIds} /> 
       <TravelStickyCta />
       {/* <StayInspiredSection /> */}
     </article>

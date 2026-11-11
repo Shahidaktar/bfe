@@ -199,7 +199,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 sm:space-y-3.5 text-[15px] sm:text-base">
               <li>
                 <a
-                  href={sectionHref('#destinations')}
+                  href="/destinations/europe"
                   className="text-white font-bold hover:text-[#c59b67] transition-colors inline-block"
                 >
                   Europe

@@ -144,6 +144,17 @@ export const Navbar: React.FC = () => {
     scrollTo(href, { offset: -80 });
   };
 
+  // Region pages that exist today; everything else stays a preview submenu.
+  const REGION_HREFS: Record<string, string> = { Europe: '/destinations/europe' };
+  const goRegion = (name: string) => {
+    const href = REGION_HREFS[name];
+    if (!href) return false;
+    setFullScreenMenuOpen(false);
+    setActiveMenu(null);
+    navigate(href);
+    return true;
+  };
+
   // Cascading menu: level-1 items, level-2 flyouts (About Us / Destinations),
   // level-3 places per region. Sub-items are dummy (no routing).
   const MENU_ITEMS: {
@@ -548,9 +559,10 @@ export const Navbar: React.FC = () => {
                                 <div key={region.name}>
                                   <button
                                     type="button"
-                                    onClick={() =>
-                                      setActiveRegion((prev) => (prev === region.name ? null : region.name))
-                                    }
+                                    onClick={() => {
+                                      if (goRegion(region.name)) return;
+                                      setActiveRegion((prev) => (prev === region.name ? null : region.name));
+                                    }}
                                     className="w-full flex items-center justify-between text-left text-base sm:text-lg text-stone-300 hover:text-[#c59b67] py-1 cursor-pointer"
                                   >
                                     <span>{region.name}</span>
@@ -622,7 +634,10 @@ export const Navbar: React.FC = () => {
                                   <button
                                     type="button"
                                     onMouseEnter={() => setActiveRegion(region.name)}
-                                    onClick={() => setActiveRegion((prev) => (prev === region.name ? null : region.name))}
+                                    onClick={() => {
+                                      if (goRegion(region.name)) return;
+                                      setActiveRegion((prev) => (prev === region.name ? null : region.name));
+                                    }}
                                     className="group w-full flex items-center justify-between gap-4 text-left py-1.5 cursor-pointer"
                                   >
                                     <span className={`font-serif text-2xl sm:text-3xl tracking-tight group-hover:translate-x-2 transition-all ${isRegionActive ? 'text-[#c59b67]' : 'text-stone-200 group-hover:text-[#c59b67]'}`}>{region.name}</span>
