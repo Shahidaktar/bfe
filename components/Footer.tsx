@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { Instagram, Facebook, Youtube, Linkedin, Mail, Phone, ArrowUp } from 'lucide-react';
 import { scrollTo, scrollToSection } from '../lib/lenis';
 import { useNavigate, useRoute } from '../lib/router';
@@ -182,7 +183,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href={sectionHref('#faqs')}
+                  href="/faq"
                   className="hover:text-[#c59b67] transition-colors inline-block"
                 >
                   FAQs
@@ -310,19 +311,19 @@ export const Footer: React.FC = () => {
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-stone-400 gap-4">
           <p>© {year} Beyond Forever Earth. All rights reserved.</p>
           <div className="flex items-center space-x-6">
-            <a
+            <Link
               href={LEGAL_LINKS.terms}
               className="hover:text-white transition-colors"
             >
               Terms & Conditions
-            </a>
+            </Link>
             <span>•</span>
-            <a
+            <Link
               href={LEGAL_LINKS.privacy}
               className="hover:text-white transition-colors"
             >
               Privacy Policy
-            </a>
+            </Link>
           </div>
 
           {/* Scroll to Top Circle Button */}
