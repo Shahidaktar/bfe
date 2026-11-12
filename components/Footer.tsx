@@ -175,7 +175,7 @@ export const Footer: React.FC = () => {
               </li>
                 <li>
                 <a
-                  href={sectionHref('#faqs')}
+                  href="/blogs"
                   className="hover:text-[#c59b67] transition-colors inline-block"
                 >
                   Blog

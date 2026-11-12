@@ -7,6 +7,7 @@ import {
   ClipboardList,
   ClipboardPen,
   Compass,
+  Newspaper,
   ChevronDown,
   type LucideIcon,
 } from 'lucide-react';
@@ -18,6 +19,7 @@ type NavItem =
 const ITEMS: NavItem[] = [
   { href: '/admin/travel-quotes', label: 'Travel Quotes', icon: ClipboardList },
   { href: '/admin/bucket-lists', label: 'Bucket Lists', icon: Compass },
+  { href: '/admin/blogs', label: 'Manage Blogs', icon: Newspaper },
   {
     label: 'Travel Assessment',
     icon: ClipboardPen,

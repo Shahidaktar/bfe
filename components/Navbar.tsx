@@ -188,6 +188,7 @@ export const Navbar: React.FC = () => {
     },
     { label: 'Create Bucket List', href: '/create-the-bucketlist' },
     { label: 'E-Shop', href: '/e-shop' },
+    { label: 'Blogs', href: '/blogs' },
     { label: 'FAQs', href: '/faq' },
   ];
 
