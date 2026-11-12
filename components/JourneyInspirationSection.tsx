@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const pexels = (id: string) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=1200`;
@@ -112,13 +113,13 @@ export const JourneyInspirationSection: React.FC<JourneyInspirationSectionProps>
 
         {/* View More */}
         <div className="mt-14 sm:mt-16 text-center">
-          <button
-            onClick={onViewMore}
+          <Link
+           href={`/destinations`}
             className="inline-flex items-center gap-2.5 px-8 py-4 bg-[#c59b67] hover:bg-[#d6aa75] active:scale-[0.98] text-[#081726] text-xs sm:text-sm font-semibold tracking-wider uppercase rounded-md transition-all shadow-lg shadow-stone-900/10 group cursor-pointer whitespace-nowrap"
           >
             <span>View More</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

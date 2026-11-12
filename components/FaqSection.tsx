@@ -1,85 +1,54 @@
-import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+'use client';
 
-type FaqCategory = 'general' | 'itineraries' | 'support';
+import React, { useMemo, useState } from 'react';
+import Link from 'next/link';
+import { Plus, Minus, ArrowRight } from 'lucide-react';
+import { FAQ_ITEMS, type FaqCategoryId, type FaqItem } from '../lib/faq';
 
-const FAQ_TABS: { id: FaqCategory; label: string }[] = [
-  { id: 'general', label: 'General' },
-  { id: 'itineraries', label: 'Itineraries' },
-  { id: 'support', label: 'Support' },
-];
+const ListEntry: React.FC<{ text: string }> = ({ text }) => {
+  const separator = text.indexOf(': ');
+  const hasLabel = separator > 0 && separator < 80;
 
-interface FaqItem {
-  id: string;
-  question: string;
-  answer: string;
-  category: FaqCategory;
-}
-
-const ALL_FAQS: FaqItem[] = [
-  {
-    id: 'where-to-go',
-    category: 'general',
-    question: "I'm not sure where to go yet, can you help me decide?",
-    answer:
-      'Yes. We match each guest’s tastes to the world through a personal consultation, not automated algorithms or pre-packaged itineraries. We discuss how you want to feel, suggest destinations that fit, and align your dates with the best weather, cultural highlights and entry requirements.',
-  },
-  {
-    id: 'planning-process',
-    category: 'general',
-    question: 'How does the custom travel planning process work?',
-    answer:
-      'You are paired with a travel consultant who specialises in your destination. Every itinerary starts from scratch: you share your vision, your consultant curates a draft, and together you refine the pace, stays and experiences until it feels right.',
-  },
-  {
-    id: 'planning-timeline',
-    category: 'general',
-    question: 'How long does it take to design and finalise an itinerary?',
-    answer:
-      'Timing depends on the complexity of the trip. An initial draft follows your consultation; refinements can take a few days to a few weeks; the final proposal is usually valid for seven days and is secured with booking forms and a deposit. We recommend planning 6–9 months ahead, or 10–12 months for peak seasons and exclusive stays.',
-  },
-  {
-    id: 'modify-packages',
-    category: 'itineraries',
-    question: 'Can the vacation and itinerary packages on your website be modified?',
-    answer:
-      'Yes. Every sample itinerary on our website is a starting point. Your consultant can adjust pacing, upgrade accommodation, add private experiences, or reshape the journey entirely around you.',
-  },
-  {
-    id: 'changes-after-booking',
-    category: 'itineraries',
-    question: 'Can I make changes to my itinerary after I have booked?',
-    answer:
-      'Yes. Contact your dedicated trip coordinator to integrate changes. Post-booking adjustments depend on supplier availability and may incur supplier costs or an administrative amendment fee, so we recommend finalising your core dates and destinations early.',
-  },
-  {
-    id: 'pricing',
-    category: 'general',
-    question: 'How does the pricing on your website work?',
-    answer:
-      'Prices shown are indicative starting points because every journey is bespoke. Your final quote reflects travel dates, accommodation style, route complexity, internal flights and private experiences. Your consultant provides a transparent custom quote before booking.',
-  },
-  {
-    id: 'whats-included',
-    category: 'itineraries',
-    question: 'What is included in the cost of my private custom vacation?',
-    answer:
-      'Inclusions are tailored to each itinerary, but typically cover VIP airport meet-and-greet and private transfers, hand-selected accommodation, internal flights, private tours and guides, and daily breakfast. Lunches and dinners are left flexible unless your itinerary specifies otherwise.',
-  },
-  {
-    id: 'emergency-support',
-    category: 'support',
-    question: 'What happens if I have an emergency or need assistance while traveling?',
-    answer:
-      'You have 24/7 local support in your time zone, a global crisis management team for major disruptions such as severe weather or flight cancellations, and proactive monitoring of internal flights and local conditions. Your safety and seamless logistics are the priority.',
-  },
-];
+  return (
+    <>
+      {hasLabel ? (
+        <>
+          <span className="font-semibold text-[#081726]">{text.slice(0, separator)}:</span>{' '}
+          {text.slice(separator + 2)}
+        </>
+      ) : (
+        text
+      )}
+    </>
+  );
+};
 
 export const FaqSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<FaqCategory>('general');
-  const [openIds, setOpenIds] = useState<Record<string, boolean>>({
-    'where-to-go': true,
-  });
+  // Extract unique categories from FAQ_ITEMS
+  const categories = useMemo(() => {
+    const map = new Map<FaqCategoryId, { id: FaqCategoryId; label: string; count: number }>();
+    for (const item of FAQ_ITEMS) {
+      const existing = map.get(item.category);
+      if (existing) {
+        existing.count += 1;
+      } else {
+        map.set(item.category, {
+          id: item.category,
+          label: item.categoryLabel,
+          count: 1,
+        });
+      }
+    }
+    return [...map.values()];
+  }, []);
+
+  const [activeTab, setActiveTab] = useState<FaqCategoryId>(
+    categories[0]?.id || 'planning'
+  );
+
+  const [openIds, setOpenIds] = useState<Record<string, boolean>>(() =>
+    FAQ_ITEMS[0] ? { [FAQ_ITEMS[0].id]: true } : {}
+  );
 
   const toggleFaq = (id: string) => {
     setOpenIds((prev) => ({
@@ -88,7 +57,10 @@ export const FaqSection: React.FC = () => {
     }));
   };
 
-  const visibleFaqs = ALL_FAQS.filter((item) => item.category === activeTab);
+  // Limit FAQs displayed in the home section (e.g. up to 5 per category)
+  const visibleFaqs = useMemo(() => {
+    return FAQ_ITEMS.filter((item) => item.category === activeTab).slice(0, 5);
+  }, [activeTab]);
 
   return (
     <section className="py-24 sm:py-32 lg:py-36 bg-[#FAF8F5] border-t border-stone-200/80 relative overflow-hidden">
@@ -97,7 +69,7 @@ export const FaqSection: React.FC = () => {
       <div className="absolute bottom-1/3 left-0 w-[450px] h-[450px] bg-stone-300/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
-        {/* Editorial Section Header - Exactly matched to PackagesSection header structure */}
+        {/* Editorial Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 sm:mb-20">
           <div>
             {/* Gold Kicker */}
@@ -122,11 +94,10 @@ export const FaqSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Category Tabs (like the reference site) */}
+        {/* Category Tabs */}
         <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-12 sm:mb-14">
-          {FAQ_TABS.map((tab) => {
+          {categories.map((tab) => {
             const isActive = activeTab === tab.id;
-            const count = ALL_FAQS.filter((item) => item.category === tab.id).length;
             return (
               <button
                 key={tab.id}
@@ -144,14 +115,14 @@ export const FaqSection: React.FC = () => {
               >
                 <span>{tab.label}</span>
                 <span className={`text-[9px] ${isActive ? 'text-white/80' : 'text-stone-400'}`}>
-                  {count}
+                  {tab.count}
                 </span>
               </button>
             );
           })}
         </div>
 
-        {/* Single Column Layout on Desktop & Mobile with Bigger Editorial Font Size */}
+        {/* FAQ Accordion List */}
         <div className="max-w-7xl mx-auto space-y-4 sm:space-y-5">
           {visibleFaqs.map((item, index) => {
             const isOpen = !!openIds[item.id];
@@ -197,16 +168,54 @@ export const FaqSection: React.FC = () => {
 
                 {isOpen && (
                   <div className="px-6 pb-6 pt-1 sm:px-8 sm:pb-8 sm:pt-2 border-t border-stone-100/80">
-                    <div className="pl-0 sm:pl-10 lg:pl-12">
-                      <p className="font-sans text-sm sm:text-base lg:text-[17px] text-stone-600 font-light leading-relaxed">
-                        {item.answer}
-                      </p>
+                    <div className="pl-0 sm:pl-10 lg:pl-12 space-y-4">
+                      {item.blocks.map((block, bIdx) => {
+                        if (block.type === 'paragraph') {
+                          return (
+                            <p
+                              key={bIdx}
+                              className="font-sans text-sm sm:text-base lg:text-[17px] text-stone-600 font-light leading-relaxed"
+                            >
+                              {block.text}
+                            </p>
+                          );
+                        }
+                        if (block.type === 'list') {
+                          return (
+                            <ul key={bIdx} className="space-y-2 text-stone-600 font-light pl-4 sm:pl-5">
+                              {block.items.map((line, lIdx) => (
+                                <li
+                                  key={lIdx}
+                                  className="list-disc font-sans text-sm sm:text-base lg:text-[17px] leading-relaxed marker:text-[#c59b67]"
+                                >
+                                  <ListEntry text={line} />
+                                </li>
+                              ))}
+                            </ul>
+                          );
+                        }
+                        return null;
+                      })}
                     </div>
                   </div>
                 )}
               </div>
             );
           })}
+        </div>
+
+        {/* Bottom Show More Button Redirecting to /faq */}
+        <div className="mt-14 sm:mt-16 flex flex-col items-center justify-center">
+          <Link
+            href="/faq"
+            className="inline-flex items-center gap-3 px-8 sm:px-10 py-4 rounded-full border border-[#8a6a35] bg-white text-[#8a6a35] hover:bg-[#8a6a35] hover:text-white font-sans text-xs sm:text-sm font-semibold tracking-widest uppercase transition-all duration-300 shadow-sm hover:shadow-md group"
+          >
+            <span>Show More FAQs</span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+          <p className="mt-3 font-sans text-[11px] sm:text-xs text-stone-400 font-light">
+            Explore all {FAQ_ITEMS.length} detailed questions and guidance
+          </p>
         </div>
       </div>
     </section>

@@ -143,7 +143,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href={sectionHref('#how-it-works')}
+                  href="/about#how-we-work"
                   className="hover:text-[#c59b67] transition-colors inline-block"
                 >
                   How We Work
@@ -151,7 +151,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href={sectionHref('#destinations')}
+                 href="/destinations"
                   className="hover:text-[#c59b67] transition-colors inline-block"
                 >
                   Travel Itineraries
@@ -175,7 +175,7 @@ export const Footer: React.FC = () => {
               </li>
                 <li>
                 <a
-                  href={sectionHref('#faqs')}
+                  href="/blogs"
                   className="hover:text-[#c59b67] transition-colors inline-block"
                 >
                   Blog

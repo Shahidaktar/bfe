@@ -204,7 +204,7 @@ export const ToursPage: React.FC<{ content: DestinationContent; tours: Tour[] }>
                   </span> */}
 
                   {/* <span className="absolute right-5 top-5 rounded-full border border-white/25 bg-black/35 px-3.5 py-1.5 font-sans text-[9px] font-semibold uppercase tracking-[0.18em] text-[#e8c697] backdrop-blur-md sm:text-[10px]">
-                    From ${tour.priceFrom.toLocaleString('en-US')}
+                    From ₹{tour.priceFrom.toLocaleString('en-IN')}
                   </span> */}
 
                   <div className="absolute inset-x-0 bottom-0 p-6 sm:p-7">

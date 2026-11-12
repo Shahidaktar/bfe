@@ -113,6 +113,25 @@ model VerificationToken {
   @@map("verification_tokens")
 }
 
+model BlogPost {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  excerpt     String    @db.Text
+  content     String    @db.Text
+  coverImage  String?
+  category    String    @default("Journal")
+  author      String    @default("Beyond Forever Earth")
+  status      String    @default("draft")
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([status, publishedAt])
+  @@index([createdAt])
+  @@map("blog_posts")
+}
+
 model BucketList {
   id            String   @id @default(cuid())
   createdAt     DateTime @default(now())

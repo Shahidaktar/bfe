@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const pexels = (id: string) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=1200`;
@@ -12,27 +13,30 @@ interface DestinationStoriesSectionProps {
 const STORIES = [
   {
     tag: 'City Breaks',
-    readTime: '4 min read',
+    readTime: '2 min read',
     title: 'Tokyo After Midnight',
     excerpt:
       'Neon backstreets, six-seat bars and the ramen counter our specialists queue for — the city that begins when the towers dim.',
     image: pexels('2506923'),
+    link:'/blogs/tokyo-after-midnight'
   },
   {
     tag: 'Field Notes',
-    readTime: '6 min read',
+    readTime: '2 min read',
     title: 'Silence, Somewhere in Lapland',
     excerpt:
       'Private cabins, huskies at first light and forests so still you can hear the snow fall. Our notes on the art of true quiet.',
     image: pexels('235621'),
+    link:'/blogs/silence-somewhere-in-lapland'
   },
   {
     tag: 'Arctic',
-    readTime: '5 min read',
+    readTime: '2 min read',
     title: 'The Night the Sky Caught Fire',
     excerpt:
       'A fjord, a firepit and forty minutes of aurora — when to go, where to stand, and why photos never quite settle the debt.',
     image: pexels('1562058'),
+    link:'/blogs/the-night-the-sky-caught-fire'
   },
 ];
 
@@ -71,10 +75,10 @@ export const DestinationStoriesSection: React.FC<DestinationStoriesSectionProps>
         {/* Editorial rows: image left, text right, hairline separated */}
         <div className="divide-y divide-stone-200/80 border-t border-stone-200/80">
           {STORIES.map((story, index) => (
-            <button
+            <Link
               key={story.title}
               type="button"
-              onClick={onRead}
+         href={story.link}             
               className="group w-full text-left grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-center py-8 sm:py-10 cursor-pointer focus-visible:outline-none"
               aria-label={`Read the story: ${story.title}`}
             >
@@ -116,7 +120,7 @@ export const DestinationStoriesSection: React.FC<DestinationStoriesSectionProps>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </span>
               </div>
-            </button>
+            </Link>
           ))}
         </div>
       </div>
