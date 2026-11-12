@@ -188,6 +188,7 @@ export const Navbar: React.FC = () => {
     },
     { label: 'Create Bucket List', href: '/create-the-bucketlist' },
     { label: 'E-Shop', href: '/e-shop' },
+    { label: 'FAQs', href: '/faq' },
   ];
 
   const solidHeader = isScrolled || route === '/enquiry' || route.startsWith('/account/bucket-lists');

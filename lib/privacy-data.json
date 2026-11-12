@@ -1,0 +1,621 @@
+{
+  "intro": [],
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This Privacy Policy (“Policy”) applies to the securing and processing of personal data by Seed Six Tech Pvt. Ltd (hereinafter “SSTPL”) in connection with personal data provided by any person (“User”) who has purchased or intends to purchase or inquiries about any product(s) or service(s) made by SSTPL through any of SSTPL’s interface channels including website, mobile site and mobile app (collectively referred herein as “Sales Channels”)."
+        },
+        { "type": "subheading", "text": "For This Privacy Policy" },
+        {
+          "type": "list",
+          "items": [
+            "References in this policy to “you” or “your” are references to ‘User’.",
+            "References to “we”, “us” or “our” are references to ‘SSTPL’.",
+            "When you take part in surveys or provide us with feedback, references to “website” mean a reference to ‘website(s)’, ‘mobile site(s)’ and mobile app(s)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "purpose-of-this-policy",
+      "title": "Purpose of This Policy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We respect your need to understand how and why information is being collected, used, disclosed, transferred and stored. Thus we have developed this Policy to familiarise you with our practices. This policy sets out the way in which we process your information when you use our Website or other digital platforms in accordance with applicable data protection laws."
+        },
+        {
+          "type": "paragraph",
+          "text": "It is important that you read this policy together with any other policies we may provide on specific occasions when we are collecting or processing your personal data, so that you are fully aware of how and why we are using your personal data. This policy supplements the other notices and is not intended to override them."
+        }
+      ]
+    },
+    {
+      "id": "defining-controller",
+      "title": "Defining Controller of Personal Data",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A “Controller” is a person or organisation who alone or jointly determines the purposes for which, and the manner in which, any personal data is, or is likely to be, processed. This notice is issued on behalf of SSTPL as controller. Processor is a natural or legal person, public authority, agency or other body which processes personal data on behalf of the Controller."
+        },
+        {
+          "type": "paragraph",
+          "text": "As the circumstances warrant, SSTPL may be Controller or Processor of your personal data."
+        }
+      ]
+    },
+    {
+      "id": "type-of-personal-data",
+      "title": "Type of Personal Data We Collect",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Personal data includes any information about any user from which that person can be identified. It does not include personal data where the identity has been removed (anonymous data)."
+        },
+        {
+          "type": "paragraph",
+          "text": "You may be asked for personal data anytime you are in contact with SSTPL directly or indirectly through a third party. We collect, use and share aggregated data such as statistical or demographic data for any purpose. Aggregated data may be derived from your personal data but is not considered personal data in law as this data does not directly or indirectly reveal your identity. For example, we may aggregate your Usage Data to calculate the percentage of users accessing a specific website feature. However, if we combine or connect aggregated data with your personal data so that it can directly or indirectly identify you, we treat the combined data as personal data which will be used in accordance with this policy."
+        },
+        {
+          "type": "paragraph",
+          "text": "We do not collect any special categories of personal data about you through our Website (this includes details about your race or ethnicity, religious or philosophical beliefs, sex life, sexual orientation, political opinions, trade union membership, information about your health and genetic and biometric data). Nor do we collect any information about criminal convictions and offences."
+        },
+        {
+          "type": "paragraph",
+          "text": "We collect, use, store and transfer different kinds of personal data about you. We have grouped the following categories of personal data to explain how this type of information is used by us. These terms are used throughout this Notice:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "“Contact Data”: including your residential address, work address, email address and telephone numbers.",
+            "“Identity Data”: including your first name, last name, username or similar identifier, title.",
+            "“Website User Data”: usernames, passwords and other security-related information used by you in relation to our services.",
+            "“Transaction Data”: transactional history about your e-commerce activities, buying behaviour. Information pertaining to any other traveller(s) for whom you made a booking through your registered SSTPL account. In such case, you must confirm and represent that each of the other traveller(s) for whom a booking has been made has agreed to have the information shared by you disclosed to us and further be shared by us with the concerned service provider(s).",
+            "“Marketing and Communications Data”: include your marketing and communication preferences. We also track when you receive and read marketing communications from us, which information we use to improve our marketing services, provide you with more relevant information and improve the quality of our marketing materials. Additional information about the personal data we process in connection with marketing is included with the marketing communications we send you.",
+            "“Public Domain or Third Party Data”: data available in public domain or received from any third party including social media channels, including but not limited to personal or non-personal information from your linked social media channels (like name, email address, friend list, profile pictures or any other information that is permitted to be received as per your account settings) as a part of your account information.",
+            "“Profile Data”: including information collected progressively when you visit our site, including your referral website, pages you visit, actions you take, patterns of page visits and information from forms you fill in.",
+            "“Technical Data”: includes information collected when you access our website, mobile site or mobile app, your internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform and other technology on the devices you are using.",
+            "“Usage Data”: information about how you use our Website.",
+            "“Any Other Personal Data”: If you request SSTPL to provide visa-related services, then copies of your passport, bank statements, originals of the filled-in application forms, photographs, and any other information which may be required by the respective embassy to process your visa application. If you request SSTPL to provide foreign exchange (forex) related services, then passport copies, A2 form, air tickets or travel authentication document to verify confirmed travel or any other documents required to process your Forex transaction."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modes-of-collecting-personal-data",
+      "title": "Modes of Collecting Personal Data",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The only way we will get any kind of personal data is if you choose to give it to us in the following circumstances:"
+        },
+        { "type": "subheading", "text": "(a) Direct Interaction" },
+        {
+          "type": "list",
+          "items": [
+            "When you make an enquiry or quotation request or make a reservation or purchase from our ‘Website’ or through our customer service team — by email(s), letter(s), fax, on the phone or in a physical store.",
+            "When you register with us, subscribe to our newsletter, enter in lucky draws/competitions/surveys/feedback, send us queries or register for promotions.",
+            "When you engage with us in any online or offline event, promotions, page hosted by us on a third party platform or location.",
+            "Through cookies on our Website."
+          ]
+        },
+        { "type": "subheading", "text": "(b) Cookies and Other Technologies" },
+        {
+          "type": "paragraph",
+          "text": "We receive Technical Data about your equipment, browsing actions and patterns. We collect this personal data by using cookies, server logs and other similar technologies. Please check cookie policy for further details of the information collected."
+        },
+        { "type": "subheading", "text": "(c) Third Parties or Publicly Available Sources" },
+        {
+          "type": "paragraph",
+          "text": "We receive Technical Data from analytics providers such as Google."
+        }
+      ]
+    },
+    {
+      "id": "grounds-for-processing",
+      "title": "Grounds for Processing of Data",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "When you use our Website, we will use your personal data in the following circumstances:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "“performance of a contract”: where we need to perform a contract which we are about to enter into or have entered into with you as a party or to take steps at your request before entering into such a contract;",
+            "“legal or regulatory obligation”: where we need to comply with a legal or regulatory obligation that we are subject to;",
+            "“legitimate interests”: where necessary for our interests provided that your fundamental rights do not override such interests. This can mean, for instance, that it is in our interest to monitor how you are using our Website or client portals to ensure that the security of our Website or client portals or systems is maintained. We make sure we consider and balance any potential impact on you (both positive and negative) and your rights before we process your personal data for our legitimate interests; and",
+            "“consent”: We rely on consent as a legal basis for processing your personal data in relation to sending direct marketing communications to you via email or text message. We do not use your personal data for activities where our interests are overridden by the impact on you (unless we have your consent or are otherwise required or permitted to by law)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "use-of-personal-data",
+      "title": "Use of Personal Data",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We will only process (i.e. use) your personal data when the law allows us to, that is, when we have a legal basis for processing. We generally use the information to establish and enhance our relationship with our users for the following purposes:"
+        },
+        { "type": "subheading", "text": "While You Make a Booking" },
+        {
+          "type": "paragraph",
+          "text": "We may use your Personal Information available with us to ease your booking process. This information may include all the data provided by you earlier, i.e. contact data. We may also use the information of travellers listed as available in or linked with your account. This information is presented to the User at the time of making a booking to enable you to complete your bookings expeditiously."
+        },
+        {
+          "type": "paragraph",
+          "text": "We may also use your Personal Information for several reasons including but not limited to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Keep you informed of the transaction status.",
+            "Send booking confirmations either via SMS or WhatsApp or any other messaging service.",
+            "Send any updates or changes to your booking(s).",
+            "Allow our customer service to contact you, if necessary.",
+            "Confirm your reservations with respective service providers.",
+            "Customise the content of our website, mobile site and mobile app.",
+            "Request for reviews of products or services or any other improvements.",
+            "Send verification message(s) or email(s).",
+            "Validate/authenticate your account and to prevent any misuse or abuse.",
+            "Contact you on your birthday/anniversary to offer a special gift or offer.",
+            "Send you important notices and communications regarding our products and services availed or changes to the terms and conditions and/or policies.",
+            "Send information about products and services offered by SSTPL and its affiliates.",
+            "Send you payment reminders and/or travel vouchers.",
+            "Newsletters to keep you updated on the travel sector. In the event that you don’t wish to receive such intimation, you may unsubscribe from this facility in the email message you receive."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We may share your personal data to third parties for reasons cited below but not limited to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Where it is necessary to process your booking, enquiry or participation.",
+            "To fulfil the service offering and/or to make booking, reservation, blocking and any such activity initiated by user.",
+            "We may share personal data with companies who provide services such as information processing, extending credit, fulfilling customer orders, delivering products to you, managing and enhancing customer data, providing customer service, assessing your interest in our products and services, and conducting customer research or satisfaction surveys. These companies are obligated to protect your information."
+          ]
+        },
+        { "type": "subheading", "text": "Marketing Promotions, Research and Other Programs" },
+        {
+          "type": "paragraph",
+          "text": "We may use your personal information for marketing promotions, research and other programs."
+        },
+        {
+          "type": "paragraph",
+          "text": "As a registered user, you will receive our latest product and service announcements, offers, promotions and event updates. If you wish to unsubscribe, you can choose to do so. We may also use the personal data to improve our product offering, develop and deliver products, services, content and advertising. Personal data may also be used internally for research, analysis and auditing. SSTPL may from time to time launch promotions to allow its Users to win great travel and travel-related prizes. During such activity, the personal information collected by us may include contact information and survey questions. We will use such information to notify contest winners and survey information to develop promotions and product improvements. SSTPL may launch travel referral or reward programs from time to time by way of which users would win travel-related rewards or other rewards. We may use your personal information to enrol you in the rewards program. Depending on the reward program, each time you win a reward, SSTPL may share your personal information with a third party that will be responsible for fulfilling the reward to you. You may, however, choose to opt out of such a reward program if you choose to do so."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here too, while rewarding any user, we at times may verify information of customers on a selective basis for various purposes such as fraud protection or any other purpose."
+        }
+      ]
+    },
+    {
+      "id": "non-personal-data",
+      "title": "Collection and Use of Non-Personal Data",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Non-personal data is data which can never be used to identify an individual. We may collect information regarding customer activities on our various portals. This aggregated information is used in research and analysis to improve and monitor products and for various promotional schemes. It may be shared in aggregated, non-personal form with third parties to enhance customer experience, product offerings or services."
+        }
+      ]
+    },
+    {
+      "id": "cookies-and-other-technologies",
+      "title": "Cookies and Other Technologies",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use cookies and other technologies to enhance your experience when you use our Website. To that effect, we have developed a cookie policy to familiarise you with our practices. You can access the cookie policy."
+        }
+      ]
+    },
+    {
+      "id": "links",
+      "title": "Links",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For your convenience, our Website provides links to other sites. When you click on one of these links, you are leaving our Website and entering another site. We are not responsible for such third-party sites. You should carefully review the privacy statements of any other sites you visit, because those privacy statements will apply to your visit to such other sites."
+        }
+      ]
+    },
+    {
+      "id": "with-whom-personal-data-is-shared",
+      "title": "With Whom Your Personal Data Is Shared",
+      "blocks": [
+        { "type": "subheading", "text": "Group Companies (Companies in the Same Group)" },
+        {
+          "type": "paragraph",
+          "text": "In the interests of improving personalisation and service efficiency, we may, under controlled and secure circumstances, share your Personal Information with our affiliate or associate entities. If the assets of SSTPL are acquired, our customer information may also be transferred to the acquirer depending upon the nature of such acquisition. In addition, as part of business expansion/development/restructuring or for any other reason whatsoever, if we decide to sell/transfer/assign our business, any part thereof, any of our subsidiaries or any business units, then as part of such restructuring exercise, customer information including the Personal Information collected herein shall be transferred accordingly."
+        },
+        { "type": "subheading", "text": "Service Providers and Suppliers" },
+        {
+          "type": "paragraph",
+          "text": "Your information shall be shared with the end service providers like airlines, hotels, bus service providers, cab rental, railways or any other suppliers who are responsible for fulfilling your booking. You may note that while making a booking with SSTPL you authorise us and consent to share your information with the said service providers and suppliers. It is pertinent to note that SSTPL does not authorise the end service provider to use your information for any other purpose(s) except for fulfilling their part of the service. SSTPL does not sell or rent individual customer names or other Personal Information of Users to third parties except sharing of such information with our business/alliance partners or vendors who are engaged by us for providing various services and for sharing promotional and other benefits to our customers on a time-to-time basis, and their booking history with us."
+        },
+        { "type": "subheading", "text": "Third Party Vendors and Business Partners" },
+        {
+          "type": "paragraph",
+          "text": "We may also share certain filtered Personal Information to our corporate affiliates or business partners who may contact the customers to offer certain products or services, which may include free or paid products/services, which will enable the customer to have a better travel experience or to avail certain benefits specially made for SSTPL customers. Examples of such partners are entities offering savings/EMI on travel, co-branded credit cards, travel insurance, insurance cover against loss of wallet, banking cards or similar sensitive information, etc. If you choose to avail any such services offered by our business partners, the services so availed will be governed by the privacy policy of the respective service provider."
+        },
+        {
+          "type": "paragraph",
+          "text": "SSTPL may share your Personal Information with third parties that SSTPL may engage to perform certain tasks on its behalf, including but not limited to payment processing, data hosting, and data processing platforms. We may provide non-personal data based on this data to suppliers, advertisers, affiliates and other current and potential business partners. We may also use such aggregate data to inform these third parties as to the number of people who have seen and clicked on links to their websites. Occasionally, SSTPL will hire a third party for market research, surveys, etc. and will provide information to these third parties specifically for use in connection with these projects. The information (including aggregate cookie and tracking information) we provide to such third parties, alliance partners, or vendors is protected by confidentiality agreements and such information is to be used solely for completing the specific project, and in compliance with the applicable regulations."
+        }
+      ]
+    },
+    {
+      "id": "disclosure-of-information",
+      "title": "Disclosure of Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Where required, we will (subject to our professional obligations and any terms of business which we may enter into with you) disclose your personal data to:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Any person or entity to whom we are required or requested to make such disclosure by any court of competent jurisdiction or by any governmental, taxation or other regulatory authority, law enforcement agency or similar body.",
+            "Our professional advisers or consultants, including lawyers, bankers, auditors, accountants and insurers providing consultancy, legal, banking, audit, accounting or insurance services to us.",
+            "Service-providers who provide information technology and system administration services to us."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "user-generated-content",
+      "title": "User Generated Content",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "SSTPL provides its users with the option to post their experiences through reviews, blog articles, ratings, and general poll questions. The customers also have an option to give their feedback or ask questions w.r.t a service offered by SSTPL or post answers to questions raised by other users. SSTPL may also engage a third party to contact you and gather your feedback about your recent booking with SSTPL. Though participation in the feedback process is purely optional, you may still receive emails, notifications (app, SMS, WhatsApp or any other messaging service) for you to share your review(s). These reviews may be written (with or without images) or in video format. The reviews written or posted will be visible on SSTPL and may also be visible on other travel or travel-related platforms."
+        },
+        {
+          "type": "paragraph",
+          "text": "The User Generated Content that SSTPL collects may be of the following kinds:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Articles for Website or Blog",
+            "Reviews and Ratings",
+            "Questions and Answers",
+            "Crowd-sourced Data Collection (poll questions)."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Each User who posts reviews or ratings, Q&A, photographs shall have a profile, which other Users will be able to access. Other Users may be able to view the number of trips, reviews written, questions asked and answered, and photographs posted."
+        },
+        {
+          "type": "paragraph",
+          "text": "Each User shall be diligent and take due care to ensure that the views expressed by you on the social media platform or SSTPL website are not derogatory or opposed to law, public policy, morality, religion, caste, creed, colour, sex, race, culture, ethics, customs, traditions, decency, good conscience, third party intellectual property etc."
+        },
+        {
+          "type": "paragraph",
+          "text": "By uploading pictures, views, images, contents, visuals, audios, experiences etc. on the social media platform or SSTPL website, you consent to SSTPL to use, reproduce, copy, upload pictures, views, look and feel, images, contents, visuals, audios, experiences, etc. in any manner, as may be deemed fit by SSTPL, without any responsibility, liability, compensation or cost due to you or any third party, on the part of SSTPL. SSTPL hereby disclaims all or any disputes, responsibilities, liabilities, litigations, costs, expenses, compensations etc., arising with respect to or in connection with the use, reproduction, copying, uploading of pictures, views, look and feel, images, contents, visuals, audios, experiences etc. contributed, shared, expressed by you, or on your behalf and/or otherwise to any third party."
+        }
+      ]
+    },
+    {
+      "id": "information-protection-and-security",
+      "title": "Information Protection and Security",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Taking into account the costs of implementation and the nature, scope, context and purposes of processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, we implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk of processing, including:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "(a) the pseudonymisation and encryption of personal data;",
+            "(b) the ability to ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services;",
+            "(c) the ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident; and",
+            "(d) a process for regularly testing, assessing and evaluating the effectiveness of technical and organisational measures for ensuring the security of the processing."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "We ensure that those who have permanent or regular access to personal data, or that are involved in the processing of personal data, or in the development of tools used to process personal data, are trained and informed of their rights and responsibilities when processing personal data."
+        },
+        {
+          "type": "paragraph",
+          "text": "To protect your personal data and prevent unauthorised access, we have put in place appropriate security measures and certifications. We have an SSL site, and users should use it to protect the information transmission while transacting online. We require any third parties processing your information to implement the same levels of protection with respect to your data. While no system is foolproof, including ours, we will continue using internet security procedures to ensure your data remains safe with us. By opening, browsing, using this site for transactions or storing any data/information, you agree to comply with the latest revised privacy notice in effect at such time. If you use some social networking or other service which maintains your information, it is governed by their terms of use and privacy notice."
+        }
+      ]
+    },
+    {
+      "id": "data-retention",
+      "title": "Data Retention",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We will only retain your personal data for as long as necessary to fulfil the purposes we collected it for. This includes, for example, the purposes of satisfying any legal, regulatory, accounting, reporting requirements, to carry out legal work, for the establishment or defence of legal claims."
+        },
+        {
+          "type": "paragraph",
+          "text": "We will retain your personal data in our databases in accordance with our document management, retention and destruction policy and applicable laws. This period may extend beyond the end of your relationship with us, but it will be only as long as it is necessary for us to have sufficient information to respond to any issues that may arise later. For example, we may need or be required to retain information to allow you to obtain credit for trip you purchased but had to cancel. We may also need to retain certain information to prevent fraudulent activity; to protect ourselves against liability, permit us to pursue available remedies or limit any damages that we may sustain; or if we believe in good faith that a law, regulation, rule or guideline requires it."
+        },
+        {
+          "type": "paragraph",
+          "text": "In some circumstances we may anonymise your personal data (so that it can no longer be associated with you) for research or statistical purposes in which case we may use this information indefinitely without further notice to you."
+        }
+      ]
+    },
+    {
+      "id": "changes-to-the-policy",
+      "title": "Changes to the Policy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This notice is effective as of September 24, 2018. We reserve the right to update or change this Policy at any time, and we will provide you with the updated policy when we make any substantial updates at the earliest, either through email or by providing a prominent notice of change on our Website. You should check the policy periodically. Your continued use of our Website after we post any modifications to the policy on this page will constitute your acknowledgement of the modifications and your consent to abide and be bound by the modified notice."
+        }
+      ]
+    },
+    {
+      "id": "your-rights",
+      "title": "Your Rights",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Under certain circumstances, you have rights under applicable data protection laws in relation to your personal data. It is our policy to respect your rights, and we will act promptly and in accordance with any applicable law, rule or regulation relating to the processing of your personal data. Details of your rights under the General Data Protection Regulation (GDPR) are set out below:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "(a) right to be informed about how personal data is used – you have a right to be informed about how we will use and share your personal data. This explanation will be provided to you in a concise, transparent, intelligible and easily accessible format and will be written in clear and plain language;",
+            "(b) right to access personal data – you have a right to obtain confirmation of whether we are processing your personal data, access to your personal data and information regarding how your personal data is being used by us;",
+            "(c) right to have inaccurate personal data rectified – you have a right to have any inaccurate or incomplete personal data rectified. If we have disclosed the relevant personal data to any third parties, we will take reasonable steps to inform those third parties of the rectification where possible;",
+            "(d) right to have personal data erased in certain circumstances – you have a right to request that certain personal data held by us is erased. This is also known as the right to be forgotten. This is not a blanket right to require all personal data to be deleted. We will consider each request carefully in accordance with the requirements of any laws relating to the processing of your personal data;",
+            "(e) right to restrict processing of personal data in certain circumstances – you have a right to block the processing of your personal data in certain circumstances. This right arises if you are disputing the accuracy of personal data, if you have objected to processing, if processing of personal data is unlawful, and you oppose erasure and request restriction instead, or if the personal data is no longer required by us, but you require the personal data to be retained to establish, exercise or defend a legal claim;",
+            "(f) right to data portability – in certain circumstances you can request to receive a copy of your personal data in a commonly used electronic format. This right only applies to personal data that you have provided to us (for example by completing a form or providing information through a Website). Information about you which has been gathered by monitoring your behaviour will also be subject to the right to data portability. The right to data portability only applies if the processing is based on your consent or if the personal data must be processed for the performance of a contract and the processing is carried out by automated means (i.e. electronically);",
+            "(g) right to object to processing of personal data in certain circumstances, including where personal data is used for marketing purposes – you have a right to object to processing being carried out by us if (a) we are processing personal data based on legitimate interests or for the performance of a task in the public interest (including profiling), (b) if we are using personal data for direct marketing purposes, or (c) if information is being processed for scientific or historical research or statistical purposes. You will be informed that you have a right to object at the point of data collection and the right to object will be explicitly brought to your attention and be presented clearly and separately from any other information; and",
+            "(h) right not to be subject to automated decisions where the decision produces a legal effect or a similarly significant effect – you have a right not to be subject to a decision which is based on automated processing where the decision will produce a legal effect or a similarly significant effect on you."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "You may exercise any of the above-mentioned rights by sending a request to info@beyondforever.earth. You will not have to pay a fee to access your personal data (or to exercise any of the other rights). However, we may charge a reasonable fee if your request is clearly unfounded, repetitive or excessive. Alternatively, we may refuse to comply with your request in these circumstances."
+        },
+        {
+          "type": "paragraph",
+          "text": "Additionally, in case you have any questions, comments or concerns about this Policy, you may contact info@beyondforever.earth. We may need to request specific information from you to help us confirm your identity and ensure your right to access your personal data (or to exercise any of your other rights). This is a security measure to ensure that personal data is not disclosed to any person who has no right to receive it. We may also contact you to ask you for further information in relation to your request to speed up our response. We try to respond to all legitimate requests within one calendar month. Occasionally it may take us longer than one calendar month if your request is particularly complex or you have made several requests. In this case, we will notify you and keep you updated."
+        }
+      ]
+    },
+    {
+      "id": "disclaimer",
+      "title": "Disclaimer",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The information, software, products, and services included on this Web site may include inaccuracies or typographical errors, and SSTPL will be entitled to rectify such inaccuracies or typographical errors. SSTPL will not be liable/responsible for any decision that you may take based on such inaccurate information. Changes are periodically added to the information herein. SSTPL may make improvements and/or changes in this Web site at any time. Advice received via this Web site should not be relied upon for personal, medical, legal or financial decisions and you should consult an appropriate professional for specific advice tailored to your situation."
+        },
+        {
+          "type": "paragraph",
+          "text": "SSTPL and/or its respective suppliers make no representations about the suitability, reliability, timeliness, and accuracy of the information, software, products, services, or any other items and related graphics contained on this website for any purpose whatsoever. All such information, software, products, services and related graphics are provided “as is” without warranty of any kind. SSTPL and/or its respective suppliers hereby disclaim all warranties and conditions about this information, software, products, services and related graphics, including all implied warranties and conditions of merchantability, fitness for a particular purpose, title and non-infringement."
+        },
+        {
+          "type": "paragraph",
+          "text": "In no event shall SSTPL and/or its parents, subsidiaries, affiliates, officers, directors, employees, agents or suppliers be liable for any direct, indirect, punitive, incidental, special, consequential damages or any damages whatsoever including, without limitation, damages for loss of use, data or profits, arising out of or in any way connected with the use or performance of this web site, with the delay or inability to use this web site, the provision of or failure to provide services, or for any information, software, products, services and related graphics obtained through this web site, or otherwise arising out of the use of this web site, whether based on contract, tort, strict liability or otherwise, even if SSTPL or any of its suppliers has been advised of the possibility of damages, including liability associated with any viruses which may infect a user’s computer equipment. If you are dissatisfied with any portion of this web site, or with any of these terms of use, your sole and exclusive remedy is to discontinue using this website."
+        },
+        {
+          "type": "paragraph",
+          "text": "Please ensure that all information given by you while booking is correct. For security reasons and to be able to advise you of any developments affecting your travel, we need to be able to contact you by telephone and email and to have your correct address on record. If any or all of these contact details are not correctly given by you, we reserve the right to cancel the transaction at your risk and cost."
+        },
+        {
+          "type": "paragraph",
+          "text": "The right to access and transact on the website is reserved, as is the right to use any particular credit card on the site for payment purposes."
+        }
+      ]
+    },
+    {
+      "id": "cookie-policy",
+      "title": "Cookie Policy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Beyond Forever Earth respects your privacy and is committed to safeguarding the security of your personal data. We respect your need to understand how information is being collected, used, disclosed, transferred and stored. Thus we have developed the cookie policy below to familiarise you with our practices. We advise you to carefully read this policy together with our Website privacy policy."
+        }
+      ]
+    },
+    {
+      "id": "cookie-purpose",
+      "title": "Purpose",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Beyond Forever Earth uses cookies and other technologies to enhance your experience when you use our website. To that effect, we have developed the below cookie policy to familiarise you with our practices."
+        }
+      ]
+    },
+    {
+      "id": "cookie-scope",
+      "title": "Scope",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This policy applies to all individuals who visit our website and to all information collected by means of the cookies."
+        }
+      ]
+    },
+    {
+      "id": "what-is-a-cookie",
+      "title": "What Is a Cookie?",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Cookies are a feature of web browser software that allows web servers to temporarily store information within your browser. They are generally used to make websites work, to keep track of your movements within the website, to remember your login details, and for similar activities. Cookies are sent to the originating website on subsequent visits or to another website that recognises the specific cookie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Most Web browsers automatically accept cookies. Cookies allow websites to recognise the device through which the website is accessed. Cookies can be used to store your preferences and past actions, which can further be used to provide specific functionalities or options suited to your preferences, thus improving your website experience. Cookies cannot access any other information on your computer. Of course, by changing the options on your web browser or using certain software programs, you can control and delete how and whether cookies will be accepted by your browser. You can also edit your browser options to choose not to receive cookies in the future."
+        }
+      ]
+    },
+    {
+      "id": "types-of-cookies",
+      "title": "Types of Cookies",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "There are different types of cookies, and they can be distinguished based on their origin, function and lifespan. Important characteristics of cookies include the following:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "First party cookies are cookies that are stored by the website you are visiting, while third party cookies are stored by a website other than the one you are visiting. Please note that we do not control the collection or further use of your data by third parties.",
+            "Necessary cookies are necessary to allow the technical operation of a website (e.g., they enable you to move around on a website and to use its features).",
+            "Performance cookies collect data on the performance of a website such as the number of visitors, the time spent on the website and error messages.",
+            "Functionality cookies increase the usability of a website by remembering your choices (e.g. language, region, login, and so on).",
+            "Targeting/advertising cookies enable a website to send you personalised advertising.",
+            "Session cookies are temporary cookies that are erased once you close your browser, while persistent or permanent cookies stay on your device until you manually delete them or until your browser deletes them based on the duration period specified in the persistent cookie file."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "information-collected-and-cookie-purpose",
+      "title": "Information Collected and Our Purpose for Using Cookies",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To help us maintain and improve our service to you, Beyond Forever Earth website, online services, applications, and advertisements may use ‘cookies’ to collect information related to your use of the website. Cookies may also be used to carry out transactions and disabling them may affect the functionality of this website."
+        },
+        {
+          "type": "paragraph",
+          "text": "Beyond Forever Earth India and its partners may use cookies or other technologies to record anonymous, non-personal information (not including your name, address, email address or telephone number) about your visits to this and other websites in order to measure advertising effectiveness."
+        },
+        {
+          "type": "paragraph",
+          "text": "We may also collect non-personal information about your visit to our website, based on your browsing (click stream) activities. This information may include but is not limited to the pages browsed and products and services viewed or booked. This helps us to better manage and develop our offers and to provide you with better products and services tailored to your individual interests and needs. We may use this information to measure the entry and exit points of visitors to the website and respective numbers of visitors to various pages and sections of the website and details of searches performed. We may also use this information to measure the usage of advertising banners, other click-through from the website."
+        },
+        {
+          "type": "paragraph",
+          "text": "As is true of most we gather some information automatically and store it in log files. This information includes Internet Protocol (IP) addresses, browser type and language, Internet Service Provider (ISP), referring and exit pages, operating system, date/time stamp, and clickstream data. We use this information to understand and analyse trends, to administer the website, to learn about user behaviour on the website, and to gather demographic information about our user base as a whole. Beyond Forever Earth may use this information in our marketing and advertising services."
+        },
+        {
+          "type": "paragraph",
+          "text": "In some of our email messages, we use a “click-through URL” linked to content on the Beyond Forever Earth website. When customers click one of these URLs, they pass through a separate web server before arriving at the destination page on our website. We track this click-through data to help us determine interest in particular topics and measure the effectiveness of our customer communications. If you prefer not to be tracked in this way, you should not click text or graphic links in the email messages."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pixel tags enable us to send email messages in a format customers can read, and they tell us whether mail has been opened. We may use this information to reduce or eliminate messages sent to customers."
+        }
+      ]
+    },
+    {
+      "id": "analytics-tools",
+      "title": "Analytics Tools",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use various analytics tools and third party technologies including Google Analytics to collect and analyse cookies. We have a contractual relationship with these third-party analytics companies, who collect this information. They may combine this information with other information that they already have independently collected from other websites. Many of these companies collect and use information under their own privacy policies."
+        }
+      ]
+    },
+    {
+      "id": "controlling-cookies",
+      "title": "Controlling Cookies",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Most internet browsers are set to automatically accept cookies. Depending on your browser, you can set your browser to warn you before accepting cookies, or you can set it to refuse them. If you do not want to receive cookies, most browsers allow you to control cookies through their settings preferences. Disabling cookies may impact your experience on our website. If you use different devices to access our website, you will need to ensure that each browser of each device is set to your cookie preference. To learn more about cookies and how to disable them, please visit http://www.allaboutcookies.org/manage-cookies/stop-cookies-installed.html."
+        }
+      ]
+    },
+    {
+      "id": "changes-to-the-cookie-policy",
+      "title": "Changes to the Cookie Policy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This policy is effective as of 24th September 2018. We reserve the right to update or change this policy at any time, and we will provide you with the updated policy when we make any substantial updates at the earliest, either through email or by providing a prominent policy of change on the website. You should check the policy periodically. Your continued use of the website after we post any modifications to the policy on this page will constitute your acknowledgement of the modifications and your consent to abide and be bound by the modified policy."
+        }
+      ]
+    },
+    {
+      "id": "terms-of-use",
+      "title": "Terms of Use",
+      "blocks": [
+        {
+          "type": "subheading", "text": "Agreement Between User and Beyond Forever Earth (SSTPL)"
+        },
+        {
+          "type": "paragraph",
+          "text": "This Web site is offered to you conditioned on your acceptance without modification of the terms, conditions, and notices contained herein. Your use of this Web site constitutes your agreement to all such terms, conditions, and notices which are subject to amendment without any notice. You agree to click on the links to and familiarise yourself with the Terms of Use and other terms and guidelines found throughout this Web site and abide by them if you choose to use the sites, pages or services to which they apply."
+        }
+      ]
+    },
+    {
+      "id": "personal-and-non-commercial-use",
+      "title": "Personal and Non-Commercial Use Limitation",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This Web site is for your personal and non-commercial use. You will not modify, copy, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, transfer, or sell any information, software, products or services obtained from this Web site."
+        }
+      ]
+    },
+    {
+      "id": "links-to-third-party-sites",
+      "title": "Links to Third Party Sites",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "This Web site may contain links to websites operated by parties other than SSTPL. Such links are provided for your convenience only. SSTPL does not control such websites, and is not responsible for their contents under any circumstances. SSTPL’s inclusion of links to such websites does not imply any endorsement of the material on such websites or any association with their operators. Your correspondence or business dealings with or participation in activities such as but not limited to promotions found in or through such websites are solely between you and such parties. You agree that SSTPL shall not be responsible or liable for any loss or damage of any sort incurred as a result of any such dealings or as a result of the presence of such links on SSTPL website."
+        }
+      ]
+    },
+    {
+      "id": "no-unlawful-or-prohibited-use",
+      "title": "No Unlawful or Prohibited Use",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "As a condition of your use of this Web site, you warrant to SSTPL that you will not use this Web site for any purpose that is unlawful or prohibited by these terms, conditions, and notices."
+        }
+      ]
+    },
+    {
+      "id": "software-available",
+      "title": "Software Available on This Web Site",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Any software that is made available to download from this Web site (“Software”) is the copyrighted work of SSTPL and/or its suppliers. Your use of the Software is governed by the terms of the end user license agreement, if any, which accompanies or is included with the Software (“License Agreement”). You will not install or use any Software that is accompanied by or includes a License Agreement unless you first agree to the License Agreement terms."
+        },
+        {
+          "type": "paragraph",
+          "text": "For any Software not accompanied by a license agreement, SSTPL hereby grants to you, the user, a personal, non-transferable license to use the Software for viewing and otherwise using this Web site in accordance with these terms and conditions, and for no other purpose provided that you keep intact all copyright and other proprietary notices. Please note that all Software, including without limitation all source code contained in this Web site, is owned by SSTPL and/or its suppliers and is protected by copyright laws and international treaty provisions. Any reproduction or redistribution of the Software is expressly prohibited by law, and may result in severe civil and criminal penalties. Violators will be prosecuted to the maximum extent possible. Without limiting the foregoing, copying or reproduction of the Software to any other server or location for further reproduction or redistribution is expressly prohibited. The Software is warranted, if at all, only according to the terms of the License Agreement."
+        },
+        {
+          "type": "paragraph",
+          "text": "You acknowledge that the Software, and any accompanying documentation and/or technical information, is subject to applicable export control laws and regulations of India. You agree not to export or re-export the Software, directly or indirectly, to any countries that are subject to Indian export restrictions."
+        }
+      ]
+    },
+    {
+      "id": "online-bookings",
+      "title": "Online Bookings",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "SSTPL has made this facility available to you as a value-added service. Using this service, you can make your online booking/booking request for booking various services offered by SSTPL. Your booking request will be processed for confirmation of prices and availability of services requested by you. Only on confirmation to you about the prices and availability, SSTPL will be bound to provide you the requested services subject, however, to you making full payment and complying with the relevant terms and conditions. Any correspondence with you before SSTPL’s aforesaid confirmation will not be treated as any acceptance of your request."
+        },
+        {
+          "type": "paragraph",
+          "text": "The online booking of the products and services made available through this website is subject to availability and solely at the discretion of SSTPL and/or its respective suppliers. Please ensure that all information given by you while booking is correct. For security reasons and to be able to advise you of any developments affecting your travel, we need to be able to contact you by telephone and email and to have your correct address on record. If any or all of these contact details are not correctly given by you, we reserve the right to cancel the transaction at your risk and cost. The right to access and transact on the website is reserved, as is the right to use any particular credit card on the site for payment purposes."
+        }
+      ]
+    }
+  ]
+}

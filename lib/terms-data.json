@@ -1,0 +1,478 @@
+{
+  "intro": [
+    "“You/Client” means and includes the Lead Passenger & on whose behalf the Booking is made and/or the person making the Booking",
+    "“We”/“Us”/“Company” means Seed Six Tech (Pvt) Ltd.",
+    "“Independent Contractors” means Hotelier / Hotel owner, Owner of any airlines or shipping company or Railway, Ferryboat owner / Operator, Coach owner/Operator, or any other person or organisation who has been selected by the company to render services to the client."
+  ],
+  "sections": [
+    {
+      "id": "itinerary-change",
+      "title": "Itinerary Change",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "All information given in this brochure/itinerary is based on the information available at the time of publication. We reserve the right to change any brochure /itinerary information before or after your booking the tour due to any events beyond our control. In case we are aware of any changes sufficiently in advance, we will notify you at the time of booking; otherwise our Tour Manager or Local representative will inform you of the changes. Major road works may necessitate route changes in the itineraries; Indian restaurants may close or change management; all of these may cause us to make changes in the itineraries. Where we know of these sufficiently in advance, we will notify you; otherwise our Tour Managers or Local Representative will inform you of the changes on the spot. There are also very big fairs and exhibitions, where all the hotels are fully booked well in advance, and therefore it may be necessary to stay in hotels in other cities. We may often operate more than one coach per departure date. We may operate more than one group per departure or club 2 groups in one departure due to operational reasons. For the comfort and convenience of our clients, we will sometimes reverse the direction, or slightly amend the itinerary including the flight routing. We will advise you of these amendments prior to the start of the tour or on tour. We may modify the itinerary based on various factors like maintenance of historical monuments, museums, major events like sports conventions, religious festivals, etc. We may take a detour to reach sightseeing places due to traffic conditions and road blocks, and that may vary the course of the itinerary. We reserve the right to change the departure date or cancel a departure due to a lack of enough passengers and will not take any responsibility for any ticket of the client which they may have purchased in advance for a sector within India or abroad. Clients are responsible for adherence to the schedule at all stages of the tour. If a client misses any part of the sightseeing tour or any such tour due to delay on his part, he will not be entitled to claim a refund of the same. The company shall not accept any liability or responsibility for any damages, loss, baggage loss, injury, accident, death, breakdown, or irregularity, which may occur in carrying out the tour arrangement, weather conditions, strikes, war, quarantine and any other cause whatsoever, and all such loss or expense must be borne by the client. We reserve the right to claim any additional expenses incurred due to delay or changes in schedules of train, aeroplane, bus, ship or other services. We further reserve the right to amend, alter, vary or withdraw any particular departure; excursions advertised or substitute a hotel of similar category if deemed necessary. You consent to the amendment/alteration in the brochure/itinerary. These terms shall be read together with the brochure/itinerary, but these terms shall prevail over the brochure/itinerary and shall override the brochure/itinerary to the extent that it is contradictory or conflicting thereto."
+        }
+      ]
+    },
+    {
+      "id": "hotels",
+      "title": "Hotels",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You will be out sightseeing most of the time, and hence we have taken care to select hotels which are convenient and comfortable. Hence sometimes they may be located away from the city centre. Most of the rooms have private bath or shower. The category of hotels will vary according to the tour package booked by you. The hotels will either be those shown in the itinerary or of the same category. Due to trade fairs and conventions in the cities, the hotels may be blocked out for more than 2 yrs in advance. In view of this, you may have to stay in hotels further away from the cities and itineraries may have to be altered/amended. Since the rooms are comparatively small, we would recommend only 3 persons in one room for your own comfort. Triple rooms are usually no larger than twin rooms, and the third bed is often a rollaway cot put in a twin room for the night. Also, due to favourable conditions in certain countries, most of the hotels may not have air conditioners/fans. All baggage and personal effects are at all times and under all circumstances your responsibility. We will not be responsible or liable in case of loss or theft or damage of such items from the hotel premises / Coach / Cruise / Airport / during travel or place of visit etc. Some hotels offer the facility of safe deposit lockers, which can be availed of by you at your own cost and risk. The company will not be liable for any loss/theft from the same. Any damages caused to the hotel rooms / Coach/place of visit etc. during your stay/tour/visit, shall be borne and payable by you, and the company will not be liable for the same. The company is not liable if there is sudden disruption/disorder of telephone, internet services, and other amenities while staying at the hotels. The company will also not be responsible for the facilities provided or not provided in the room/bathroom/hotel premises, etc. by the Hotel or its staff. Rude or unprofessional behaviour of hotel staff does not come under the direct purview of the company, and the company will not be responsible for the same. Facilities like mini bar, pay television channels, telephone, etc are not complimentary, and these facilities, if used by the client, have to be paid for by the client directly to the Hotel and such charges are not included in the tour cost. The client will have to abide by the check in /check out time of the hotel. Any changes made directly by the hotel come under their direct purview, and we will not be liable for any compensation due to this change."
+        }
+      ]
+    },
+    {
+      "id": "meals-special-requests",
+      "title": "Meals & Special Requests",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The menus are pre-set menus provided for meals on the tour. The types of meals are clearly indicated in the brochure. Unlike an airline, we cannot provide a special meal, nor do we guarantee a special diet to the client, except to the extent mentioned in the brochure and preferred by you. We however, reserve the right to change the meal arrangement if circumstances make it necessary to do so. If the client wakes up late and misses the breakfast offered to him or the client is out on his own and reaches late or in case of delay of flights or for any other reason whatsoever the client misses any meal including breakfast offered to him by the company, then no claim can be made for the meal/ breakfast, which he has missed and not utilised. Special requests for room allocation, diet consideration on tour/cruise/flight etc. must be made in writing at the time of booking, but all such requests shall be subject to availability. The Company will not be held liable for claims of damages or consequential loss if the Company is unable to process such requests for want of availability."
+        }
+      ]
+    },
+    {
+      "id": "airline",
+      "title": "Airline",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Company shall, in no circumstances whatsoever and howsoever caused, be liable to the client or any person traveling with him for Loss of Baggage by the Airline, failure to provide meal of the client’s choice by the Airline, Overbooking of seats by the Airline, failure on the part of Airline to accommodate client despite having confirmed tickets, Meals offered by the airline/ Quality of meal, Flight delay, if the client misses the flight, Changes of flight schedule/routing/airline mentioned at the time of booking, etc. In this condition, the expression howsoever caused includes negligence on the part of the client or the service provider. If the client is booked on a particular Airline on a particular date and due to certain reasons beyond the control of the Company, the client is not allowed to board the flight, the client shall not hold the Company responsible for the same, and no claim whatsoever can be made by the client against the Company. Airport taxes / Airport Development Fee as applicable to be paid over & above the Tour Cost should there be a rise post the printing of the brochure. All the booking/cancellation/change of the airline ticket and the travel on such airline ticket will be subject to the terms and conditions of respective Airlines and the same may be provided to the client by the company upon request from client. Airlines are operating as per their own norms, rules and regulations and client has to strictly adhere to the same"
+        }
+      ]
+    },
+    {
+      "id": "loss-damages",
+      "title": "Loss & Damages",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Company is not responsible for any loss or damage to personal belongings during the stay in the hotel or while travelling in the coach. Due to theft or loss of baggage, the tour participant can lodge a complaint with the local authorities at his/her sole discretion, cost, risk and consequences"
+        }
+      ]
+    },
+    {
+      "id": "coach-seating",
+      "title": "Coach & Seating",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We use air-conditioned/air-cool luxury coaches. However, sometimes due to extreme weather conditions the same may not seem to be very effective. The company will not be responsible for any defect in the Coach or in the Air-conditioner / air-cooler or for the behaviour of the Driver or the attendant. We have found it fair to operate daily seat rotation on board our coach, so no seat numbers are allocated. The coaches are equipped with an emergency washroom; however, this facility is not to be used instead of the rest rooms at our frequent comfort stops. If you are carrying any high value items on the coach, we advise you not to leave them behind when you leave the coach. We will not be responsible or liable in case of loss of such items from the coach. All baggage and personal effects are at all times and in all circumstances your responsibility. Any damages caused to the coach during your travel shall be payable by you, and the company will not be liable for the same. The drivers are bound by specific rules, like maximum driving hours within a day and during a week, rest period per day/week, etc. Clients will have to strictly adhere to the prescribed timetable for the day so that the driver can complete the travel; otherwise, certain sightseeing schedules may be missed due to your actions/delays and the same will be non-refundable."
+        }
+      ]
+    },
+    {
+      "id": "accommodation-child",
+      "title": "Accommodation for Child Below 12 Years",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "It is expressed and given to understand that a child below 12 years of age who is booked on the tour paying the special rate without a bed will not be provided with a bed in the hotel while on the tour under any circumstances. In case the client makes any changes in their rooming while on the tour, the company shall not make any refunds or pay any compensation to them. In case the Client decides to make any change in the rooming while on the tour subject to availability, then they shall be bound to pay additional charge."
+        }
+      ]
+    },
+    {
+      "id": "cancellation-visa-rejection",
+      "title": "Cancellation Due to Visa Rejection",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "All the clients travelling on a Beyond Forever Earth Holiday tour must have a valid visa. Client shall ensure that the Visa Application Form (s) is duly filled and verified by the Client, to its satisfaction, before it is submitted to the Embassy. / Consulate. However, kindly note that it is entirely at the discretion of the concerned Consulate / Authorities to grant/reject visa even after submitting all relevant documents, and the company will not be held responsible for the same. The company is not at all liable for such cases or has any influence on the consulate/embassy’s decision. The role of the company is only to provide necessary guidance to the client for the purpose of applying for VISA. The company will not be responsible for non- issuance of visa due to receipt of incomplete/delayed documents from the Clients. It is a possibility that the consulate may ask the passengers to appear for a personal interview. This is at the sole discretion of the Consulate / Authorities. If the required documents are not submitted by the client, the issuance of visa will further be delayed/rejected, and the client will not hold Beyond Forever Earth liable for the same. Client should adhere to all the norms and conditions laid by the .consulate/embassy Upon rejection of visa, if the client wishes to reapply for the visa, he/she is liable to pay the requisite fee to the consulate again and he / she will not claim from Beyond Forever Earth"
+        }
+      ]
+    },
+    {
+      "id": "registrations",
+      "title": "Registrations",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In cases where the travel agent through whom the clients have booked the tour signs the Booking Form for and on behalf of the persons named in the Booking Form, it shall be deemed and construed that the clients have duly authorised the said travel agent to sign on their behalf. The signing of the Booking Form by the Client or by their travel agent shall mean acceptance in totality of the Terms and Conditions contained herein by the Client/s. No person, including the Employee/s and the Agent/s of the Company, other than the Company, in writing, has the authority to vary, add, amend, alter or waive any stipulation, representation, term or condition set forth herein. Any assurance given by any person shall have no consequence. The Company reserves the right to decline to register any person/s as Client/s for any Tour or to cancel their registration without assigning any reason."
+        }
+      ]
+    },
+    {
+      "id": "reschedule-date-change",
+      "title": "Reschedule / Date Change of Tour",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In the event a client wishes to change the date of travel or transfer from one tour to another, prior to the departure of the originally booked tour. The originally booked tour will be treated as cancelled by the client, thereby attracting the cancellation charges as stated herein, which shall be payable by the client. The client shall, on making payment of cancellation charges, be able to make a fresh booking for another tour."
+        }
+      ]
+    },
+    {
+      "id": "cancellations",
+      "title": "Cancellations",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "All services such as Airline seats / Hotel accommodation/ground transportation etc. for group tours are preblocked well in advance. We are still liable to pay all our suppliers/vendors and bear the overhead costs involved in rendering services to you. You shall be bound by the cancellation charges which shall apply when the cancellation happens on your own accord or due to any circumstances. If circumstances make you cancel the Tour, the cancellation must be intimated to us in writing. You consent to the levy of the Cancellation Charges by the Company as stipulated below:- In the event you have opted for the Beyond Forever Earth Trip Protection, your Cancellation Charges shall be calculated and determined by the Company in accordance with the Beyond Forever Earth Trip Protection. The Terms & Conditions of Beyond Forever Earth Trip Protection will apply The Company reserves the right to cancel any Tour before departure, without assigning any reason. In such an event, all monies paid by you will be fully refunded forthwith in Indian Rupees only, but no compensation will be payable. In case of cruises, 100% of the cruise cost paid will be forfeited in case of any cancellations, irrespective of time of cancellation. The company cannot assume responsibility for any additional cost or any fees relating to the issuance and/or cancellation of air tickets or other arrangements not done through the company. The company reserves the right to forfeit the booking deposit in case of any cancellations. However, passengers whose visas are not granted by the consulates must intimate us at-least 45 days in advance of the date of commencement/departure of the tour, at which time the company will deduct `5,000/- per person towards Guidance Charges over & above any other actual expenses, if any, incurred and issue credit voucher for the balance, to be redeemed by the client for any services to be availed from the Company, in future. (in which case the above Cancellation Charges shall not apply). However, if such intimation is received after the said period of 45 days before the date of commencement/departure of the tour, the cancellation charges will be applicable as per the cancellation rules mentioned above"
+        }
+      ]
+    },
+    {
+      "id": "payments",
+      "title": "Payments",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "All payments towards the tour cost must be made by the client to the company in accordance with the procedure and time frame mentioned herein below. All payments made within 10 days before the tour departure date will have to be paid via Bank Transfer /Demand Draft (no cheques will be accepted). For payments, PAN Card is mandatory for every adult individual travelling. INR payments made towards the foreign exchange component of your tour will be calculated as per the ROE (rate of exchange) prevailing on the day of payment. Payment towards FX component made in INR has to come directly from the passenger, keeping with RBI Guidelines. The card that is swiped for payment of the tour’s foreign exchange should be of the client himself/herself. The client cannot use his /her card for payment of another person’s foreign exchange component of the tour package except for his / her dependent parents and/or child or children. The FX payment is a part of BTQ (Basic Travel Quota) of the Client. 3% service charges (i.e. remittance charges) would be applicable if the Client chooses to pay us in Foreign currency notes. Proof of purchase from a Full Fledged Money Changer (FFMC) should accompany such payments made by Client when above USD 2000. Client holding a passport issued by a country other than India will be required to make payment in foreign currency for the foreign currency component of the tour cost and not in INR."
+        },
+        {
+          "type": "subheading",
+          "text": "Payment Procedure"
+        },
+        {
+          "type": "paragraph",
+          "text": "Request our customers to insist on a printed Payment Acknowledgement slip for the payments made at all our outlets. Full payment must be made in accordance with the procedure stated above. In case of noncompliance thereto by the client, the company reserves the right to cancel the tour/booking of the client and forfeit the amount already deposited with the Company and in case of the shortfall recover further monies as cancellation charges mentioned herein. NRI clients have to pay the forex component payment in forex itself via our Nostro Accounts. Payment in INR towards forex component not permitted.(No 3rd Party Payments permitted for forex component) PAN card of the person making payment mandatory. Self-declaration and PAN Card from payer (if not travelling with the booked pax) for INR payment made on behalf of a family member or friend. (No 3rd Party Payments permitted for forex component, forex payment has to come from the account of the traveller only)"
+        }
+      ]
+    },
+    {
+      "id": "refunds",
+      "title": "Refunds",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Refunds (If any) for amendments and/or cancellations will be paid directly to you for bookings made directly with the company’s office. For bookings routed through the Travel Agent, the refunds will be routed through them. It would take at least 30 working days to process refunds. There are no refunds payable for any unutilized or partially utilised services (e.g. Airline tickets, Meals, Entrance Fees, Optional Tour, Hotel, Sightseeing etc.) The refund for the foreign exchange component of the tour will be refunded in INR only and will be at the prevailing day's rate of exchange of the company. Third Party refund i.e. airlines, cruise, overseas suppliers could take between 30 to 90 working days , provided relevant supporting documents are provided to the Company. If a tour is cancelled by the Company, then all monies will be refunded after taking into consideration the actual expenses incurred for Visas, etc"
+        }
+      ]
+    },
+    {
+      "id": "deviations",
+      "title": "Deviations",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Any request for deviation by the client which may be in the form of an additional service(s) or reduced service(s), from that which is being offered in the pre-booked tour, shall be communicated by the client to the Company in writing. The Company shall register the request for deviation subject to receipt of advance caution money for services under deviation. However, registering a deviation request and receiving advance caution money towards the same shall not guarantee the acceptance of the deviation request by the Company. The Company shall, subject to the availability of the services, as per the deviation request of the client, accept or reject the deviation. If the Company accepts deviation, then it shall confirm the deviation date and collect the balance monies, if any, along with the applicable taxes upon the confirmation of the deviation. The Company does not assure, guarantee or warrant that the deviation request of the client shall always be accepted and disclaims all liability, and/or responsibility arising thereto."
+        }
+      ]
+    },
+    {
+      "id": "scope-of-activity",
+      "title": "Scope of Activity",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We are travel agents and holiday organisers only. The role of the company is that of an agent of the client to secure proper services for the tour from the independent contractors and service providers such as the airlines, shipping company, hotels, coach, etc. We do not control or operate any airline, nor do we own or control any shipping company, coach or coach company, hotel, transport or any other facility or service mentioned in this brochure. We take care in selecting all the ingredients in your holiday; but because we only select them and have no control over operating them, we cannot be responsible for any injury, death, loss or damage, which is caused by the act or default or omission of the management or employees of any hoteliers, airlines, shipping company, coach owner/coach operator who are the company’s independent contractors arising outside our normal selection process."
+        }
+      ]
+    },
+    {
+      "id": "privacy-of-information",
+      "title": "Privacy of Information",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We treat all the information furnished by you as confidential. However, you consent and authorise us to share all or any information about you with airline, hotel or other service providers who will provide the services to you during your tour and also to fellow traveller (s). You acknowledge that we shall be constrained to disclose the information furnished by you, if such disclosure is required by the law or by an order of a court or the rules, regulations or enquiry by any government / statutory agency having regulatory or statutory authority over the Company."
+        }
+      ]
+    },
+    {
+      "id": "conditions-of-passage",
+      "title": "Conditions of Passage",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "These conditions are applicable to every client of the Company, who books a Brochure Tour or any Special Tour or travel arrangement. In the event of a client booking through us a Tour and/or Tour Arrangement of any other Tour Operators like Royal Caribbean, Norwegian Cruise, Carnival, Cosmos etc., the Terms and Conditions specified by such Tour Operator, including their payment schedule, cancellation, refund etc. shall be applicable, in addition to our Terms and Conditions while determining the contractual relation between the Client, the Tour Operator and us."
+        }
+      ]
+    },
+    {
+      "id": "health-insurance",
+      "title": "Health & Insurance",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "It shall be the duty of the Client to inform the Company in case the Client has any medical condition that may affect his ability to enjoy and pursue fully the Tour Arrangements and wherein the interest of the Group or any member thereof is prejudicially affected. Pace of certain tours might not be suitable to individuals. Hence, we suggest that individuals may choose tours as per their health conditions. The Company presumes that the Client and/or the Group or any member thereof have no disability or disease or such medical or health condition which could adversely impact his/her/their health on the tour, except which has been disclosed by the Client/Group/ any member to the Company in writing, at the time of Booking of the tour. Company reserves the right to ask the Client to provide written certification/disclosure of medical fitness before departure. Subject to the disclosure made by the Client/Group/any member, the Company in its discretion may refuse to take on tour or accept any booking of the Client, if in its sole judgment the medical or health condition of the Client is not fit to undergo any tour. If a medical or health condition has not been disclosed to the Company in writing, the Company will not be liable to provide any assistance or money back. The client must obtain a valid travel/health insurance before the commencement of the tour and the Company will not be responsible for the same. Settlement of the claims will be entirely at the discretion of the insurance company."
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "title": "Communication",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Any communication directed at the address or made through/on the contact details such as e-mail ID, cell phone/telephone no./fax no. of the Client as disclosed in the Booking Form or made to the travel agent through whom the Client has made the bookings with the company shall be deemed to have been communicated to and received by the Client. The Company shall not be responsible for any error on the part of the mode of communication or the Travel Agent in this regard."
+        }
+      ]
+    },
+    {
+      "id": "conditions-of-travel",
+      "title": "Conditions of Travel",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "You agree to unconditionally abide, adhere and comply solely at your costs and expenses to all laws, rules, notifications, Travel advisories, guidelines, directives, and communications issued from time to time by all or any Governments, Authorities, Ministries, Departments, Local Bodies in India or Abroad, related to your tour to the foreign destination and/or on your return from the tour to your home destination in India or Abroad including but not limited to Covid-19 Protocols on quarantine, vaccinations, etc. or in connection with any other Pandemic, epidemic, disease, condition, etc., which may be communicated by all or any Governments, Authorities, Ministries, Departments, Local Bodies in India or Abroad with or without notice at any point of time whether at the commencement of the tour, during the tour and/or on the completion of the tour, as the case may be The Client will have to strictly follow the Tour Program and return to India as per the tour itinerary. There shall be no refund if the Client fails to join the group at the commencement of the tour, or joins the group later or leaves the group before culmination of the tour. It shall be noted that for all purposes, it shall be the responsibility of the Client to reach the place of commencement of the Tour and register with the representative of the company at the appointed place, date and time. Even if a client is unable to reach the place of commencement of the tour due to any reason whatsoever including loss of baggage or loss of travel documents, his booking shall be treated as “no show” on the tour and 100% cancellation charges will be levied In case if a client along with his family is compelled to discontinue the tour due to any reason whatsoever including illness, death or loss of passport or any travel documents, no claim shall be entertained for refund of unutilized services. In case a client along with his family is compelled to discontinue the tour due to any reason whatsoever including illness, death or loss of passport or any travel documents, no claim shall be entertained for refund of unutilized services. If a client avails pre-tour services or part thereof, or the air tickets (cost of which is included in the main tour cost) but fails to join the group for the main tour at the appointed place, or cancels the tour after using the air tickets or pre - tour arrangements or part thereof, it shall be treated as “no show” and there will be no refund whatsoever for the unutilized pre-tour or main tour services The Company reserves the right to drop/remove / discard from the tour anyone whose behaviour is deemed likely to affect the smooth operation of the tour or adversely affect the enjoyment or safety of other clients and the Company shall be under no liability to any such person. It is hereby declared that the immunities provided under this contract shall be available to the Company’s Managers, including Tour Managers, Employees, Servants and Agents but not to the Independent Contractors selected by the Company Each of these conditions shall be severable from the other and if any provision be invalid illegal or unenforceable, the remaining provisions shall nevertheless have full force and effect. No liability on the part of the Company arising in any way out of the Contract in respect of any tour, holiday, excursion facilities shall exceed the total amount paid or agreed to be paid for the tour holiday, and shall in no case include any consequential loss or additional expense whatsoever."
+        },
+        {
+          "type": "paragraph",
+          "text": "The prices quoted in this brochure have been calculated at the rate prevailing at the time of printing of this brochure. The Company reserves the right to amend the prices published in this brochure in case of currency fluctuations, changes in the various gross rates of exchange, and/or fuel costs, special/high season charge levied by the suppliers, hike in the airline/rail charges before the date of departure and to surcharge accordingly. All such increases in price must be paid for in full before the Departure by the Client The prices quoted in this brochure have been calculated at the rate prevailing at the time of printing of this brochure. The Company reserves the right to amend the prices published in this brochure in case of currency fluctuations, changes in the various gross rates of exchange,and/or fuel costs, special/high season charge levied by the suppliers, hike in the airline/rail charges before the date of departure and to surcharge accordingly. All such increases in price must be paid for in full before the Departure by the Client In case of publication of any travel scheme offering any discount or benefit by the Company, it shall have the sole right to withdraw such a scheme or discount at any time unless a specific assurance of the contrary is published."
+        },
+        {
+          "type": "paragraph",
+          "text": "In the case of one or more but not all clients signing the ‘Booking Form ’, it shall be deemed that others have duly authorised the concerned signing client / (s) Initial deposit only ensures registration, to receive any services including Ticketing, Visas, and Hotel Accommodation from the Company; client will have to make full payment towards the same."
+        },
+        {
+          "type": "paragraph",
+          "text": "We cannot provide individual aid to any of the client/traveler for walking, dining, getting on & off from any of the transport vehicle or other personal needs. So it is indispensable that a qualified companion must accompany such client/traveler who needs such assistance. In the absence thereof, such client/traveler will be joining the tour on his own risk and consequences."
+        },
+        {
+          "type": "paragraph",
+          "text": "The client/Traveler must have his / her passport valid for at least 6 months after such departure date. Company solely reserves the right to publish group photographs of the clients taken during the tour Distance, temperature & pre/post tour accommodation prices given in the Brochure are approximate & are subject to change. Photos of meals & sightseeing published in the Brochure are only for reference & may change from actual meals served/sights."
+        },
+        {
+          "type": "paragraph",
+          "text": "In case the company offers any adventure activities, then it is significant to note that all the clients should enjoy such activity/ride at their own risk as such kind of adventure might be risky at times, especially for heart patients, expecting women, people with Blood Pressure, etc."
+        },
+        {
+          "type": "paragraph",
+          "text": "The tour will be operated subject to a minimum of 20 full paying clients travelling together. The services of Beyond Forever Earth Tour Manager will be provided with a group of a minimum of 20 full paying clients. If the group size is less than 20 clients, you will be given an option of travelling on another departure date. The company shall in no circumstances whatsoever be liable to the client for any overstay expenses due to delay or changes in bus/air / trains/ship / or cancellation of special bogie or other services due to sickness, weather conditions, strike, war or any other cause whatsoever."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sightseeing missed & / or program being cancelled after the commencement of the tour & before the due period due to any unavoidable situations which are beyond our control."
+        },
+        {
+          "type": "paragraph",
+          "text": "Any Loss/Damage of baggage by the Airlines / Hotels / Coach / Cruise"
+        }
+      ]
+    },
+    {
+      "id": "trip-protection-plan",
+      "title": "Trip Protection Plan",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We encourage you to take Trip Protection Plan in your own interest. The benefit of availing Trip Protection Plan is that in selected circumstances, as detailed herein below, if you opt for cancellation of your Tour, then instead of the applicable cancellation charges you would be charged cancellation charges at a concessional rate. The Trip Protection Plan costing is built-in in the Tour cost itself. If you decide not to opt for the Trip Protection Plan, then you would be entitled to a reduction in the tour cost to the extent of Trip Protection Plan Cost. However, we sincerely recommend that you, in your own interest, avail the Trip Protection Plan by spending marginally on the Trip Protection Plan and maximising your savings by reduction in the cancellation charges, in the event of cancellation. The refund under Trip Protection Plan shall be a fixed percentage of pre-agreed Tour cost determine basis of the communication of cancellation from the Tour date and it shall exclude the Visa fees, Trip Protection Plan charges and Insurance which shall not be refunded under any circumstances. Let us now understand in more detail about the Trip Protection Plan."
+        },
+        {
+          "type": "subheading",
+          "text": "When can you invoke the Trip Protection Plan"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "In the event of death of a Traveller or Co-Traveller or his/her immediate family member.",
+            "In the event of visa rejection of the Traveller or Co-Traveller.",
+            "In the event of sudden hospitalization or medical emergency of the Traveller or Co-Traveller."
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "How to invoke the Trip Protection Plan"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "You need to notify in writing (by filling the Tour Refund Form) to the BLT office from where you booked the tour within 5 days of the event, which caused you to cancel the Trip.",
+            "You need to liaise with the BLT office from where you booked the tour and submit a tour refund form.",
+            "Attach necessary documentation to support the reasons for cancellation of the tour: Hospital / Medical reports along with attending Doctor’s certificate certifying unfit to travel. Certified death certificate in the event of a death. Visa rejection letter."
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Significant Points to Remember"
+        },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Refund under Trip Protection Plan shall not be processed if full payment of Tour Cost is not received by the Company.",
+            "Trip Protection Plan does not cover cancellation of the Tour by the Company.",
+            "If tour cancellation happens due to a previous rejection case or a pre-known medical condition, which was known at the time of booking, you shall not be eligible to invoke Trip Protection Plan and receive any refund thereto.",
+            "Failure to communicate cancellation to the Company within 5 days from the date of occurrence of event; exceptions will be accepted only in the cases of death or hospitalisation.",
+            "The document submitted by you, in support of your case, does not substantiate the facts relied upon by you.",
+            "The decision of the Company shall be final and binding upon you.",
+            "The TAT for refund shall be seven days from the day of receipt of complete documents.",
+            "The Refund shall be in the form of cheque/Gift Voucher/Gift Card. An additional 2% of the refund amount will be given to you when you opt for Gift Voucher/Gift Card. The validity of Gift Voucher/Gift Card shall be one year from the date of issue of Gift Voucher/Gift Card ."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "other-terms",
+      "title": "Other Terms",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "There is no Contract between the Company and the Client until the Company has received the initial deposit as stated in the clause regarding ‘payments’. The Company has the right at any time and for any reason: To terminate this contract after acceptance of deposit but before the Commencement of Tour without assigning any reason whatsoever. In the event the Company terminates this contract, the Company shall refund the amount paid by the client without payment of any interest. To amend, alter, vary or withdraw any tour, holiday, excursion, airline, flight routing or facility or discounts/concessions it has advertised or published or to substitute an Independent Contractor of similar class if it is deemed advisable or necessary. In either case, the company shall not be liable for any damage, additional expense, or consequential loss suffered by the clients or for any compensation claims made To use an alternate cruise liner, cabin category it has advertised or published or to substitute a cruise of similar class if it is deemed advisable or necessary. In either case, the company shall not be liable for any damage, additional expense, or consequential loss suffered by the clients or for any compensation claims made. No person other than the company, in writing, has the authority to vary, add, amplify or waive any stipulation, representation, term or condition in the brochure. In the event of the company exercising its rights to amend or alter any of the services as mentioned in the itinerary, after such tour or holiday has been booked, the client shall have the right:"
+        },
+        {
+          "type": "paragraph",
+          "text": "To continue with the tour or holiday as amended or altered, or to accept any alternative tour or holiday which the company may offer. In either of these above cases, the client shall not be entitled to, or the company shall not be liable to the client for any damage, additional expense, consequential loss suffered by him or to pay any amount as refund. To cancel the tour, in which event the cancellation charges as stated herein shall apply, and the client will be liable to pay to the company such charges. The company shall in no circumstances whatsoever be liable to the client for: Any death, personal injury, sickness, accident, loss, delay, discomfort, increased expenses, consequential loss and/or damage or any misadventure howsoever caused. Any act, omission, default of Independent Contractor or other person or be any servant or agent, employed by them who may be engaged or concerned in the provision of accommodation, refreshment, carriage facilities or service for the client or for any person travelling with him howsoever caused. The temporary or permanent loss of or damage to baggage or personal effects howsoever caused. If the client has any complaint in respect of the services provided by any of the Independent Contractors, the client shall immediately notify the same in writing to the Independent Contractor and a copy thereof should be handed over to the Tour Manager of the company to enable the company to take up the matter with the Independent Contractor so that in future other clients do not face the same difficulty Any claim or complaint by the client must be notified to the company in writing within 7 days of the end of this holiday tour. No claim notified to this company beyond this period will be entertained, and the company shall incur no liability whatsoever in respect thereof. The tour is subject to RBI / GOI rules & regulations. Part of the tour cost will be paid in EURO /USD / AUD / GBP / NZD / CHF / SGD out of your BTQ."
+        },
+        {
+          "type": "paragraph",
+          "text": "Client hereby expressly consents and authorises the Company to share his/her or his/her family/group information or data to any Supplier, Independent Contractor or third party for the purpose of providing services to the Client. The Client’s aforesaid consent and authority also extends to all such third party products, items and offers including SIM cards which the Company may offer for free along with the Tour package and which is not being separately sold to the Client."
+        },
+        {
+          "type": "paragraph",
+          "text": "The said products, items and offers being free would be availed by the Client at the Tour cost without requiring the Client to pay any price towards the same. The use of the products, items and offers and related after-sales services shall be the responsibility of all such third party Manufacturer or service providers and the same shall be subject to the terms of Use of such third-party manufacturer or service provider. The Client may in his/her own discretion avail or refuse to avail the products, items and offers. The Company does not guarantee or warrant that the products, items and offers offered to the Client along with the Tour package shall be of a superior quality or that it shall meet the expectation of the Client or that the performance of the products, items and offers shall be satisfactory. These products, items and offers are offered by the Company to the Client on"
+        },
+        {
+          "type": "paragraph",
+          "text": "“AS IS”, “WHERE IS” and “HOW IS” basis, free of cost to the Client without any liability, risk or responsibility on the part of the Company. We value and respect our staff(s), vendor(s), representative(s), employee(s) and tour manager(s) who work tirelessly to make your tour memorable and successful. You are requested to co-operate and support our staff(s), vendor(s), representative(s), employee(s) and tour manager(s) at all times during the tour and more particularly during exigencies and trying times, when our staff(s), vendor(s), representative(s), employee(s) and tour manager(s) would work hard to restore normalcy. During such times, we look forward to your understanding, patience and support to come out of the impasse. We have a zero tolerance policy against any abusive behaviour, wrong doing, misconduct and violence towards our staff(s), vendor(s), representative(s), employee(s) and tour manager(s) on tour. Any such action, omission, commission, wrongdoing, misconduct, violence and abusive behavior byyou, towards our staff(s), vendor(s), representative(s), employee(s) and tour manager(s) shall be dealt with seriously, leading to immediate disembarking/offloading of the Client from the tour including initiating appropriate legal proceedings against the Client at his/her cost and consequences, in accordance with the applicable law"
+        }
+      ]
+    },
+    {
+      "id": "important-note",
+      "title": "Important Note",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "In any booked package, the services which include cruise line, helicopter or ferry would be subject to availability/weather conditions / Local Body permissions / any other statutory requirements. Beyond Forever Earth is not responsible/ liable for any happening or non-happening of any event under any circumstances whatsoever."
+        }
+      ]
+    },
+    {
+      "id": "force-majeure",
+      "title": "Force Majeure",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The Company shall be excused from the performance or punctual performance of any of the terms and conditions/services/tour or part thereof as above, if the performance thereof is prevented or delayed by any cause beyond the reasonable control of the Company, which shall include acts of God, riots, wars, accidents, embargo, terror attacks, coup strike, natural calamities or requisition (acts of government), or delays/negligence/carelessness in the performance of the independent contractors caused by any such circumstances as referred herein. Any additional cost incurred by the Company, for the services provided to the Client during the Force Majeure event shall be paid by the Client. All dispute/complaints with respect to these terms and conditions and the tour and services shall be subject to the jurisdiction of Courts at Mumbai only. Upon signing the booking form, these terms and conditions shall be binding on both the company and the client and shall become the only basis of relations between the parties and all previous communications in whatsoever form or mode, whether oral or otherwise, with respect to any term or conditions of the tour and services shall stand cancelled/revoked/terminatedUpon signing the booking form, these terms and conditions shall be binding on both the company and the client and shall become the only basis of relations between the parties and all previous communications in whatsoever form or mode, whether oral or otherwise, with respect to any term or conditions of the tour and services shall stand cancelled/revoked/terminated"
+        }
+      ]
+    },
+    {
+      "id": "booking-policy",
+      "title": "Booking Policy",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "I hereby declare that the total amount of foreign exchange purchased from or remitted through all sources in India during the financial year is within the overall limit of USD 250,000/- (US Dollars Two hundred and Fifty Thousand only), which is the limit prescribed by the Reserve Bank of India for the purpose and certify that the source of funds for purchasing the foreign exchange/ making the said remittance belongs to me and the foreign exchange will not be used for a prohibited purpose."
+        },
+        {
+          "type": "paragraph",
+          "text": "I confirm that I am an Indian National. We also hereby agree and undertake to give such information/documents as will reasonably satisfy you about this transaction in terms of the above declaration. We also undertake that if we refuse to comply with any such requirement or make only unsatisfactory compliance therewith, BLT shall refuse in writing to undertake such transaction. Convenience Fee charged during any transaction would be NON REFUNDABLE. These transactions are subject to the availability of the currency mentioned herein. If the required currency is not available, the same will be communicated to you by our representative. Upon your confirmation, the transaction can be given in the other currency. The receipt issued by BLT is subject to the amount being irrevocably credited and realised in TCIL’s Bank account. In case of online/electronic payment of monies to the designated BLT bank account, I/We undertake to irrevocably credit and realise the monies due in TCIL’s Bank account and not issue any instructions to my/our banker or cause to do any act, deed or thing in furtherance of reversing, debiting, nullifying or recovering the due credit made to the TCIL’s Bank account."
+        },
+        {
+          "type": "paragraph",
+          "text": "I/We further undertake and confirm that I/we shall be bound to pay the monies towards the tour cost to TCIL, if the same is reversed, debited, nullified, or recovered from TCIL’s Bank Account due to any technical snag, system error, internet issues or for any reason whatsoever, I/WE shall voluntarily make good the loss caused to BLT due to such reversal, debit, nullity, recovery of monies from TCIL’s Bank account without waiting for any official intimation from BLT to the said effect. I/We do hereby indemnify and keep indemnified BLT from all claims, demands, liabilities, expenses and losses arising due to any and/or all reversal, debit, nullity, recovery of monies from TCIL’s Bank account due to any technical snag, system error, internet issues or for any reason whatsoever, without any objection, demur or protest. Please allow us 48 working hours to deliver the transaction. Deliveries will not be possible on Sundays and Bank holidays."
+        },
+        {
+          "type": "paragraph",
+          "text": "In case of any dispute, the decision of Beyond Forever Earth India Ltd will be final and binding. No cancellations allowed for this product. In case of cancellations, the amount will be refunded after deduction of debit charges. Any Direct Cash Deposits in “Seed Six Tech (Pvt) Ltd. Bank Account” is NOT permitted and shall be forfeited"
+        }
+      ]
+    },
+    {
+      "id": "terms-of-use",
+      "title": "Terms of Use",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Agreement between User and Seed Six Tech (Pvt) Ltd. Convenience fee charged during any transaction would be NON-REFUNDABLE. This Web site is offered to you conditioned on your acceptance without modification of the terms, conditions, and notices contained herein. Your use of this Web site constitutes your agreement to all such terms, conditions, and notices which are subject to amendment without any notice."
+        },
+        {
+          "type": "paragraph",
+          "text": "You agree to click on the links to and familiarise yourself with the Terms of Use and other terms and guidelines found throughout this Web site and abide by them if you choose to use the sites, pages or services to which they apply"
+        }
+      ]
+    },
+    {
+      "id": "product-terms",
+      "title": "Product Terms & Conditions",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "General Information"
+        },
+        {
+          "type": "list",
+          "items": [
+            "All travellers while returning to India should submit a self-declaration form (mandatory) on the online Air Suvidha portal(www.newdelhiairport.in) before the scheduled travel, including the last 14 days of travel details. Each passenger shall also submit a declaration with respect to the authenticity of the report and will be liable for criminal prosecution if found otherwise.",
+            "The mandatory SG Arrival Card with electronic Health Declaration (“SG Arrival Card”) facilitates the submission of personal information, trip details and health declaration by all travellers seeking entry into Singapore. Submit your SG Arrival Card within three (3) days before the date of arrival in Singapore. Your travel documents and SG Arrival Card acknowledgement (soft copy is acceptable as well) are to be shown to the ICA officer at the immigration counter upon arriving in Singapore. Submit your SG Arrival Card via https://eservices.ica.gov.sg/sgarrivalcard/",
+            "Note: Surcharges may be applicable on a few of the above departure dates. Please contact your local travel agent for information on Surcharge dates and prices.",
+            "Note: All Optional will be operated with a minimum of 15 opting passengers. Optional Payment in cash needs to be submitted to the Tour Manager on Day 1."
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Important Note"
+        },
+        {
+          "type": "subheading",
+          "text": "Airline & Airfare"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The airfare is based on the fare structure existing as on 15th June 2022. Any further increase in the airfare due to an increase in the fuel price, change in Government regulations, taxes, etc., charged by the airline will have to be borne by the passengers.",
+            "Passengers missing flights should note that the entire ticket gets a no-show and a new return ticket needs to be bought by the passengers themselves",
+            "For prices and departure dates from your hub city, please contact our local sales offices/travel agents.",
+            "Passengers joining this tour must travel to/from the hub city at their own expense.",
+            "We advise carrying a maximum of 1 big and 1 cabin bag per person, especially if internal flights on tour and Train Journey are involved during your tour. (Luggage allowance in Internal Flights 15kgs). Also, every bag is the guest's responsibility, and porterage is not included at Hotels, airports, Immigration halls, Train stations, Cruise terminals, etc",
+            "Prohibited items – E-cigarettes, displaying Images of Buddha, travelling by Land in Thailand, Malaysia & Singapore",
+            "Cigarettes/ Liquor/ Toys or replica of Arms and explosive etc.",
+            "Has restrictions to be carried. Please refer to the link below for more information",
+            "https://www.customs.gov.sg/businesses/importing-goods/controlled-and-prohibited-goods-for-importgoods-for-import"
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "Hotels"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Many hotels in Asia have only Twin beds. Double beds will mostly be Queen size and not King size.",
+            "For a child with a bed: At times hotels don't have enough roll-away beds; in that case they might give a double and a separate single room.",
+            "As a 3rd adult person in a triple room, most hotels use roll-away beds or 2 queen-size beds, and the room size may be the SAME as a Twin/ double room. (Hence we also strongly suggest you upgrade the Triple into 2 separate rooms during booking)",
+            "Average standard room size in Southeast Asia is 15 - 18 square meters. Standard Check in time 1500 hrs; Standard check out time 1200hrs. Early check-in and late Checkout is subject to availability and at an extra Cost. Adjoining rooms' requests are subject to availability during check-in.",
+            "All hotel rooms booked for the group are Standard category. Getting a double room or a twin room is subject to availability of the same in the hotel during check-in.",
+            "All selected hotels on the above tour serve breakfast which is a combination of continental and local dishes as per hotel standard. Indian meals will be provided during Lunches and Dinners as per itinerary.",
+            "Most hotels have Centralized Air Conditioners, which is set at a specific temperature for the entire property. Restaurants and Sightseeing attractions are mostly naturally ventilated.",
+            "A person 12 years and below is considered a child and above 12 years, an adult.",
+            "Due to international events and trade fairs all throughout Asia such as Air Show, music festivals, sports championships, etc., you may have to stay in hotels further away from the city.",
+            "During certain dates, stay may be split in two hotels",
+            "Any damages caused to the hotel rooms / Coach during your stay, shall be payable by the passengers.",
+            "We also reserve the right to substitute a hotel of similar class if it is deemed advisable or necessary.",
+            "Most of your journey in Asia is by coach/Van and hence you are requested to keep the coach/Van clean.",
+            "Eating and drinking is not permitted in the coach.",
+            "One check-in bag and one handbag per person only, due to limited boot space in the coach.",
+            "In most cities, there are parking restrictions for coaches, and it may not be possible to stop at all the places during the city tour. Tour Manager will try his/her best to stop the coach wherever possible for a photo stop.",
+            "Coaches are non-wheelchair compliant. There are steps to board / alight from the coach."
+          ]
+        },
+        {
+          "type": "subheading",
+          "text": "General Points"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Surcharges may be applicable on a few of the above departure dates. Please contact your local travel agent for information on Surcharge dates and prices.",
+            "The tour will be operated subject to a minimum of 25 full-paying passengers travelling together. If the group size is less than 25 passengers, you will be given an option of travelling on a FIT basis, by paying an additional supplement on a seat-in-coach basis with local representatives to assist you.",
+            "Passengers can request a direct flight from the hub city by paying a supplement cost.",
+            "When the tour has less than 25 adults and is operated on a seat-in-coach basis, there will be instances where the driver acts as a guide as well.",
+            "Tap water is potable in Singapore, approved by the local government body.",
+            "Health is of Paramount importance for all Tourists opting for this tour. It is important that every individual tourists to get their health examination done by a family physician before travelling. The above tour includes walking at many sightseeing locations.",
+            "If a Traveller requires a wheelchair, this has to be carried by the individual from their home city/country.",
+            "For certain departures, we may re-route the itinerary. However, all sightseeing and inclusions will remain the same. On some occasions you may have to join another group in case the group does not have adequate members.",
+            "Tipping is not kept compulsory on your tour; although we appreciate your gesture of tipping to Guides, Drivers, Hotel staff etc.",
+            "Carry passport, Travel document, Visa at all times during the tour.",
+            "Entire Tour Program is designed and pre-planned with various appointments and schedule, hence, we strongly urge you to always be in time for the smooth conduct of group tour. Those who repeatedly delay group departures will be responsible for joining the group by their own transportation arrangements.",
+            "Carry an umbrella and wear comfortable footwear during the tour. It is advisable to carry swimwear or nylon clothing and slippers/ Sandals for Beach locations and water theme parks, if any. Casino dress code for men Full shirt, pants, and covered footwear.",
+            "Weather in South East Asia is warm and Humid throughout the year with unpredictable monsoon showers.",
+            "International Debit/ Credit cards/ Currency cards are not accepted everywhere, but only at selected shops in Thailand/Malaysia/Singapore. Local currency in Cash (THB/MYR/SGD) is accepted over counters at all locations. Money exchange is available at Airports and city centre shopping areas.",
+            "Tips & Optional can only be paid in Cash.",
+            "Advisable to carry universal charging adaptors in South East Asia.",
+            "A few rides inside the Theme Park, Cable car ride, Wings of Time, etc. are operated subject to weather conditions and Maintenance schedule."
+          ]
+        }
+      ]
+    }
+  ]
+}

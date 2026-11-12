@@ -13,8 +13,8 @@ export const SOCIAL_LINKS = {
 } as const;
 
 export const LEGAL_LINKS = {
-  privacy: 'https://beyondforever.earth/privacy-policy',
-  terms: 'https://beyondforever.earth/terms-and-conditions',
+  privacy: '/privacy-policy',
+  terms: '/terms-and-conditions',
 } as const;
 
 const SPECIALIST_MESSAGE =
