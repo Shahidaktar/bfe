@@ -29,9 +29,9 @@ export const DURATION_BANDS = [
 
 export const BUDGET_BANDS = [
   { id: 'any', label: 'Any budget' },
-  { id: 'under-5', label: 'Under $5,000' },
-  { id: '5-65', label: '$5,000–$6,500' },
-  { id: 'over-65', label: '$6,500+' },
+  { id: 'under-400k', label: 'Under ₹4,00,000' },
+  { id: '400k-550k', label: '₹4,00,000–₹5,50,000' },
+  { id: 'over-550k', label: '₹5,50,000+' },
 ] as const;
 
 export type DurationBand = (typeof DURATION_BANDS)[number]['id'];
@@ -47,7 +47,7 @@ export const TOURS: Tour[] = [
       'Central Europe’s most beautiful and historic cities, linked by rail — Salzburg, Munich, Innsbruck and the Swiss Alps.',
     image: '/destinations/europe-rail.jpg',
     days: 12,
-    priceFrom: 6400,
+    priceFrom: 540000,
     interests: ['Rail', 'Culture'],
   },
   {
@@ -58,7 +58,7 @@ export const TOURS: Tour[] = [
       'Two capitals, one crossing — grand boulevards, hidden courtyards and river evenings in Paris and London.',
     image: '/destinations/europe-paris.jpg',
     days: 7,
-    priceFrom: 4900,
+    priceFrom: 390000,
     interests: ['Culture', 'Food & Wine'],
   },
   {
@@ -69,7 +69,7 @@ export const TOURS: Tour[] = [
       'Budapest, Vienna and Prague — three elegant capitals, coffee houses, opera and architecture at an unhurried pace.',
     image: '/destinations/europe-capitals.jpg',
     days: 10,
-    priceFrom: 5600,
+    priceFrom: 460000,
     interests: ['Culture'],
   },
   {
@@ -80,7 +80,7 @@ export const TOURS: Tour[] = [
       'Caldera views, private sailing and quiet island tavernas — the Cyclades without the crowds.',
     image: '/destinations/europe-hero.jpg',
     days: 8,
-    priceFrom: 5200,
+    priceFrom: 420000,
     interests: ['Coastal', 'Food & Wine'],
   },
   {
@@ -91,7 +91,7 @@ export const TOURS: Tour[] = [
       'From the canals of Venice to the vineyards of Tuscany and the still water of Lake Como.',
     image: '/destinations/europe-venice.jpg',
     days: 9,
-    priceFrom: 5900,
+    priceFrom: 490000,
     interests: ['Culture', 'Food & Wine'],
   },
   {
@@ -102,7 +102,7 @@ export const TOURS: Tour[] = [
       'Zermatt, glacier trains and alpine walking — high passes and quiet valleys, with private guiding throughout.',
     image: '/destinations/europe-alps.jpg',
     days: 8,
-    priceFrom: 6800,
+    priceFrom: 580000,
     interests: ['Nature', 'Rail'],
   },
   {
@@ -113,7 +113,7 @@ export const TOURS: Tour[] = [
       'Villa gardens, boat days and long lunches on the water — the lakes at their quietest.',
     image: '/destinations/italy-como.jpg',
     days: 6,
-    priceFrom: 4300,
+    priceFrom: 360000,
     interests: ['Nature', 'Food & Wine'],
   },
   {
@@ -124,7 +124,7 @@ export const TOURS: Tour[] = [
       'Frescoed ceilings, palace concerts and old-town squares — the Baroque heart of Central Europe.',
     image: '/destinations/europe-baroque.jpg',
     days: 9,
-    priceFrom: 5100,
+    priceFrom: 430000,
     interests: ['Culture'],
   },
 
@@ -137,7 +137,7 @@ export const TOURS: Tour[] = [
       'From the canals of Venice to the ancient city of Rome, with Murano, Burano and a Tuscan kitchen in between.',
     image: '/destinations/italy-florence.jpg',
     days: 11,
-    priceFrom: 5800,
+    priceFrom: 480000,
     interests: ['Culture', 'Food & Wine'],
   },
   {
@@ -148,7 +148,7 @@ export const TOURS: Tour[] = [
       'Italy beyond the famous cities — lakefront villas, cellar tastings and slow afternoons in the vineyards.',
     image: '/destinations/italy-como.jpg',
     days: 8,
-    priceFrom: 4700,
+    priceFrom: 390000,
     interests: ['Food & Wine', 'Nature'],
   },
   {
@@ -159,7 +159,7 @@ export const TOURS: Tour[] = [
       'Bellagio, Varenna and the Alps — a nature-lover’s route across two countries, with private transfers throughout.',
     image: '/destinations/europe-alps.jpg',
     days: 10,
-    priceFrom: 6200,
+    priceFrom: 520000,
     interests: ['Nature'],
   },
   {
@@ -170,7 +170,7 @@ export const TOURS: Tour[] = [
       'Rome’s piazzas, the sassi of Matera and the whitewashed coast of Apulia — the south, properly.',
     image: '/destinations/italy-matera.jpg',
     days: 9,
-    priceFrom: 4900,
+    priceFrom: 410000,
     interests: ['Culture', 'Food & Wine'],
   },
   {
@@ -181,7 +181,7 @@ export const TOURS: Tour[] = [
       'Palermo’s street food, Cefalù by boat and long days on the water — Sicily’s culture and its coast.',
     image: '/destinations/italy-palermo.jpg',
     days: 8,
-    priceFrom: 5300,
+    priceFrom: 440000,
     interests: ['Coastal', 'Culture'],
   },
   {
@@ -192,7 +192,7 @@ export const TOURS: Tour[] = [
       'Florence, Rome and the Greek islands on one continuous route — two civilisations, one journey.',
     image: '/destinations/italy-paestum.jpg',
     days: 12,
-    priceFrom: 6600,
+    priceFrom: 560000,
     interests: ['Culture', 'Coastal'],
   },
   {
@@ -203,7 +203,7 @@ export const TOURS: Tour[] = [
       'Cypress roads, hill towns and estate lunches — Tuscany with a driver and no timetable.',
     image: '/destinations/italy-hero.jpg',
     days: 7,
-    priceFrom: 4100,
+    priceFrom: 340000,
     interests: ['Food & Wine', 'Culture'],
   },
   {
@@ -214,7 +214,7 @@ export const TOURS: Tour[] = [
       'Cliffside hotels, private boat days and the quiet side of Capri — the coast at its most considered.',
     image: '/destinations/italy-trevi.jpg',
     days: 6,
-    priceFrom: 4800,
+    priceFrom: 400000,
     interests: ['Coastal'],
   },
 ];
@@ -234,9 +234,9 @@ export function durationBand(days: number): Exclude<DurationBand, 'any'> {
 }
 
 export function budgetBand(price: number): Exclude<BudgetBand, 'any'> {
-  if (price < 5000) return 'under-5';
-  if (price <= 6500) return '5-65';
-  return 'over-65';
+  if (price < 400000) return 'under-400k';
+  if (price <= 550000) return '400k-550k';
+  return 'over-550k';
 }
 
 export function filterTours(

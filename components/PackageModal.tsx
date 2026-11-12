@@ -123,16 +123,13 @@ export const PackageModal: React.FC<PackageModalProps> = ({
             </div>
 
             <div className="flex items-center gap-3 w-full sm:w-auto">
-              <button
-                onClick={() => {
-                  onClose();
-                  onBookNow(pkg);
-                }}
+              <a
+                href={'/enquiry'}
                 className="w-full sm:w-auto px-6 py-3 bg-[#c59b67] hover:bg-[#b68b55] active:scale-[0.98] text-[#081726] text-xs font-semibold tracking-wider uppercase rounded-xl transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Customize This Journey</span>
                 <ArrowRight className="w-3.5 h-3.5" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
